@@ -37,10 +37,6 @@ export function Programs() {
               <a
                 key={item.number}
                 href={item.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.querySelector(item.href)?.scrollIntoView({ behavior: "smooth", block: "start" });
-                }}
                 className="group block p-6 lg:p-8 transition-colors duration-150 bg-transparent hover:bg-ink focus-visible:outline-3 focus-visible:outline-focus cursor-pointer"
               >
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline">

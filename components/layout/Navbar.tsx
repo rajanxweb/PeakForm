@@ -15,9 +15,9 @@ export function Navbar() {
       <header className="sticky top-0 z-50 w-full h-[72px] bg-bone border-b border-line">
         <div className="max-w-[1440px] h-full mx-auto px-4 md:px-8 lg:px-12 flex items-center justify-between">
           {/* Brand Logo */}
-          <Link
-            href="#"
-            className="flex items-center gap-2 group focus-visible:outline-3 focus-visible:outline-focus select-none"
+          <a
+            href="#content-start"
+            className="flex items-center gap-2 group focus-visible:outline-3 focus-visible:outline-focus select-none cursor-pointer"
           >
             <svg
               aria-hidden="true"
@@ -29,21 +29,17 @@ export function Navbar() {
             <span className="font-display text-[22px] font-extrabold tracking-tighter uppercase text-ink group-hover:text-accent transition-colors duration-150">
               {siteConfig.brand.name}
             </span>
-          </Link>
+          </a>
 
           {/* Desktop Navigation Links */}
           <nav
             aria-label="Primary Navigation"
             className="hidden lg:flex items-center gap-8 h-full"
           >
-          {siteConfig.brand.nav.map((item) => (
+            {siteConfig.brand.nav.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.querySelector(item.href)?.scrollIntoView({ behavior: "smooth", block: "start" });
-                }}
                 className="h-full flex items-center font-sans text-body text-stone hover:text-ink transition-colors duration-150 border-b-2 border-transparent hover:border-accent focus-visible:outline-3 focus-visible:outline-focus cursor-pointer"
               >
                 {item.label}

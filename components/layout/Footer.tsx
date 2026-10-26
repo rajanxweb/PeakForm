@@ -9,16 +9,6 @@ import { siteConfig } from "@/config/site-config";
  * - All hash links use native <a> + scrollIntoView (Next.js Link breaks same-page scrolling).
  */
 
-function hashLink(href: string) {
-  if (href.startsWith("#")) {
-    return (e: React.MouseEvent<HTMLAnchorElement>) => {
-      e.preventDefault();
-      document.querySelector(href)?.scrollIntoView({ behavior: "smooth", block: "start" });
-    };
-  }
-  return undefined;
-}
-
 export function Footer() {
   return (
     <footer className="w-full bg-ink text-bone border-t border-line-dark">
@@ -48,7 +38,6 @@ export function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    onClick={hashLink(link.href)}
                     className="hover:text-accent transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-focus cursor-pointer"
                   >
                     {link.label}
@@ -68,7 +57,6 @@ export function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    onClick={hashLink(link.href)}
                     className="hover:text-accent transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-focus cursor-pointer"
                   >
                     {link.label}

@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
@@ -72,7 +74,7 @@ export type ButtonProps = LinkButtonProps | NativeButtonProps;
 /**
  * Button — strictly rectilinear athletic trigger following PeakForm Design System.
  * - Radius: 0px (enforced globally)
- * - When `href` is supplied renders a Next.js `<Link>` (or `<a>` if external).
+ * - When `href` is supplied renders a Next.js `<Link>` (or `<a>` if external or hash).
  * - When `href` is absent renders a native `<button>`.
  * - ArrowUpRight icon translates 2px up/right on hover.
  */
@@ -131,10 +133,14 @@ export function Button({
     // which breaks same-page anchor scrolling entirely.
     if (href.startsWith("#")) {
       const handleHashClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        e.preventDefault();
-        const target = document.querySelector(href);
+        const targetId = href.replace(/^#/, "");
+        const target = document.getElementById(targetId) || document.querySelector(href);
         if (target) {
+          e.preventDefault();
           target.scrollIntoView({ behavior: "smooth", block: "start" });
+          if (window.location.hash !== href) {
+            window.history.pushState(null, "", href);
+          }
         }
         onClick?.(e);
       };

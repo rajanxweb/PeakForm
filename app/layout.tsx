@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Archivo, Instrument_Sans, JetBrains_Mono } from "next/font/google";
+import { SmoothScroll } from "@/components/ui/SmoothScroll";
 import "./globals.css";
 
 // Headline font — heavy condensed weights matching the design system
@@ -58,6 +59,7 @@ export default function RootLayout({
       className={`${archivo.variable} ${instrumentSans.variable} ${jetbrainsMono.variable}`}
     >
       <body className="bg-bone text-ink antialiased font-sans">
+        <SmoothScroll />
         {children}
       </body>
     </html>
