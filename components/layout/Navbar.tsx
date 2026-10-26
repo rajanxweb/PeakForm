@@ -1,0 +1,86 @@
+"use client";
+
+import React, { useState } from "react";
+import Link from "next/link";
+import { Menu } from "lucide-react";
+import { siteConfig } from "@/config/site-config";
+import { Button } from "@/components/ui/Button";
+import { MobileMenu } from "./MobileMenu";
+
+export function Navbar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  return (
+    <>
+      <header className="sticky top-0 z-50 w-full h-[72px] bg-bone border-b border-line">
+        <div className="max-w-[1440px] h-full mx-auto px-4 md:px-8 lg:px-12 flex items-center justify-between">
+          {/* Brand Logo */}
+          <Link
+            href="#"
+            className="flex items-center gap-2 group focus-visible:outline-3 focus-visible:outline-focus select-none"
+          >
+            <svg
+              aria-hidden="true"
+              className="w-7 h-7 fill-accent shrink-0 transition-transform duration-150 group-hover:scale-105"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 2L2 19.5H7.5L12 11.5L16.5 19.5H22L12 2Z" />
+            </svg>
+            <span className="font-display text-[22px] font-extrabold tracking-tighter uppercase text-ink group-hover:text-accent transition-colors duration-150">
+              {siteConfig.brand.name}
+            </span>
+          </Link>
+
+          {/* Desktop Navigation Links */}
+          <nav
+            aria-label="Primary Navigation"
+            className="hidden lg:flex items-center gap-8 h-full"
+          >
+            {siteConfig.brand.nav.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="h-full flex items-center font-sans text-body text-stone hover:text-ink transition-colors duration-150 border-b-2 border-transparent hover:border-accent focus-visible:outline-3 focus-visible:outline-focus"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Right Header CTAs & Mobile Toggle */}
+          <div className="flex items-center gap-4">
+            <div className="hidden sm:block">
+              <Button
+                href={siteConfig.brand.cta.href}
+                variant="primary"
+                size="sm"
+                showArrow
+              >
+                {siteConfig.brand.cta.label}
+              </Button>
+            </div>
+
+            {/* Mobile Hamburger Toggle */}
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(true)}
+              aria-label="Open navigation menu"
+              aria-expanded={mobileMenuOpen}
+              className="lg:hidden h-11 w-11 flex items-center justify-center border border-ink text-ink hover:bg-ink hover:text-bone transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-focus"
+            >
+              <Menu className="w-5 h-5" strokeWidth={2} aria-hidden="true" />
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Full-Screen Mobile Drawer */}
+      <MobileMenu
+        isOpen={mobileMenuOpen}
+        onClose={() => setMobileMenuOpen(false)}
+      />
+    </>
+  );
+}
+
+export default Navbar;

@@ -1,3 +1,3 @@
-// components/layout/index.ts
-// Barrel export for layout components (Header, Footer, Navigation, etc.)
-export {};
+export * from "./Navbar";
+export * from "./MobileMenu";
+export * from "./Footer";
