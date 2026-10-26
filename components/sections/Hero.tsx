@@ -84,7 +84,7 @@ export function Hero() {
 
               {/* Monochromatic Telemetry Tag */}
               {hero.image.tag && (
-                <div className="absolute bottom-4 left-4 bg-ink text-bone px-3 py-2 font-mono text-label uppercase tracking-wider flex items-center gap-2 select-none shadow-none">
+                <div className="absolute bottom-4 left-4 bg-ink text-bone px-3 py-2 font-mono text-label uppercase tracking-wider flex items-center gap-2 select-none">
                   <span className="w-2 h-2 bg-accent shrink-0" aria-hidden="true" />
                   <span>{hero.image.tag}</span>
                 </div>
