@@ -142,7 +142,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       <div className="p-4 sm:px-8 pb-8 pt-4 border-t border-line shrink-0 space-y-4">
         <Button
           href={siteConfig.brand.cta.href}
-          onClick={onClose}
+          onClick={onClose as React.MouseEventHandler<HTMLAnchorElement>}
           variant="primary"
           size="full"
           showArrow

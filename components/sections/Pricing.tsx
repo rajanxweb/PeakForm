@@ -38,7 +38,7 @@ export function Pricing() {
         </div>
 
         {/* 3-Column Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 pt-12 items-end">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 pt-12 lg:items-end">
           {pricing.tiers.map((tier) => {
             const isInverted = tier.highlighted;
 
@@ -48,13 +48,13 @@ export function Pricing() {
                 className={cn(
                   "p-8 flex flex-col justify-between border transition-all duration-150",
                   isInverted
-                    ? "bg-ink text-bone h-[584px] relative border-line-dark order-first lg:order-none"
-                    : "bg-paper text-ink h-[560px] border-line"
+                    ? "bg-ink text-bone min-h-[584px] relative border-line-dark order-first lg:order-none pt-12 lg:pt-8"
+                    : "bg-paper text-ink min-h-[560px] border-line"
                 )}
               >
                 {/* Top Badge for Inverted Tier */}
                 {tier.topTag && (
-                  <div className="absolute -top-3 left-8 bg-accent text-ink px-3 py-1 font-mono text-label uppercase font-black tracking-wider select-none">
+                  <div className="absolute top-0 left-0 right-0 lg:top-auto lg:left-8 lg:right-auto lg:-top-3 bg-accent text-ink px-4 lg:px-3 py-2 lg:py-1 font-mono text-label uppercase font-black tracking-wider select-none text-center lg:text-left">
                     {tier.topTag}
                   </div>
                 )}
