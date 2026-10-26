@@ -117,11 +117,18 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       {/* Main Nav Links Stack */}
       <nav className="flex-1 flex flex-col justify-center px-4 sm:px-8 py-8 divide-y divide-line">
         {siteConfig.brand.nav.map((item, index) => (
-          <Link
+          <a
             key={item.href}
             href={item.href}
-            onClick={onClose}
-            className="group flex items-center justify-between py-5 font-display text-display-md uppercase text-ink hover:text-accent transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-focus"
+            onClick={(e) => {
+              e.preventDefault();
+              onClose();
+              // Small delay lets the menu close before scrolling
+              setTimeout(() => {
+                document.querySelector(item.href)?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }, 80);
+            }}
+            className="group flex items-center justify-between py-5 font-display text-display-md uppercase text-ink hover:text-accent transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-focus cursor-pointer"
           >
             <span className="flex items-baseline gap-4">
               <span className="font-mono text-label text-stone">
@@ -134,7 +141,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               strokeWidth={2}
               aria-hidden="true"
             />
-          </Link>
+          </a>
         ))}
       </nav>
 

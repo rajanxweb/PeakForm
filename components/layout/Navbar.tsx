@@ -36,14 +36,18 @@ export function Navbar() {
             aria-label="Primary Navigation"
             className="hidden lg:flex items-center gap-8 h-full"
           >
-            {siteConfig.brand.nav.map((item) => (
-              <Link
+          {siteConfig.brand.nav.map((item) => (
+              <a
                 key={item.href}
                 href={item.href}
-                className="h-full flex items-center font-sans text-body text-stone hover:text-ink transition-colors duration-150 border-b-2 border-transparent hover:border-accent focus-visible:outline-3 focus-visible:outline-focus"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector(item.href)?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
+                className="h-full flex items-center font-sans text-body text-stone hover:text-ink transition-colors duration-150 border-b-2 border-transparent hover:border-accent focus-visible:outline-3 focus-visible:outline-focus cursor-pointer"
               >
                 {item.label}
-              </Link>
+              </a>
             ))}
           </nav>
 

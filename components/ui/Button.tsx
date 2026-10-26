@@ -110,6 +110,7 @@ export function Button({
   if ("href" in rest && rest.href !== undefined) {
     const { href, external, onClick, ...linkRest } = rest as LinkButtonProps;
 
+    // External links → plain <a> with noopener
     if (external) {
       return (
         <a
@@ -125,6 +126,32 @@ export function Button({
       );
     }
 
+    // Hash-only links (#section) → native <a> with smooth scroll.
+    // Next.js <Link> treats these as route navigations in App Router,
+    // which breaks same-page anchor scrolling entirely.
+    if (href.startsWith("#")) {
+      const handleHashClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+        onClick?.(e);
+      };
+
+      return (
+        <a
+          href={href}
+          onClick={handleHashClick}
+          className={classes}
+          {...(linkRest as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
+        >
+          {content}
+        </a>
+      );
+    }
+
+    // All other internal routes → Next.js Link (correct for page navigation)
     return (
       <Link href={href} onClick={onClick} className={classes}>
         {content}

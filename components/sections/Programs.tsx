@@ -34,10 +34,14 @@ export function Programs() {
           {/* Program Rows (Cols 5-12) */}
           <div className="lg:col-span-8 border-t border-line divide-y divide-line">
             {programs.items.map((item) => (
-              <Link
+              <a
                 key={item.number}
                 href={item.href}
-                className="group block p-6 lg:p-8 transition-colors duration-150 bg-transparent hover:bg-ink focus-visible:outline-3 focus-visible:outline-focus"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector(item.href)?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
+                className="group block p-6 lg:p-8 transition-colors duration-150 bg-transparent hover:bg-ink focus-visible:outline-3 focus-visible:outline-focus cursor-pointer"
               >
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline">
                   {/* Number */}
@@ -68,7 +72,7 @@ export function Programs() {
                     ↗
                   </div>
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
         </div>

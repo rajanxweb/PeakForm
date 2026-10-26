@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import { siteConfig } from "@/config/site-config";
 
 /**
@@ -7,7 +6,19 @@ import { siteConfig } from "@/config/site-config";
  * - Surface: Ink (#141412) with bone/stone typography
  * - Clean 1px hairline dividers (#34322D)
  * - 4-column structured ledger
+ * - All hash links use native <a> + scrollIntoView (Next.js Link breaks same-page scrolling).
  */
+
+function hashLink(href: string) {
+  if (href.startsWith("#")) {
+    return (e: React.MouseEvent<HTMLAnchorElement>) => {
+      e.preventDefault();
+      document.querySelector(href)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+  }
+  return undefined;
+}
+
 export function Footer() {
   return (
     <footer className="w-full bg-ink text-bone border-t border-line-dark">
@@ -35,12 +46,13 @@ export function Footer() {
             <ul className="space-y-2 font-sans text-body-sm text-bone">
               {siteConfig.footer.programLinks.map((link) => (
                 <li key={link.label}>
-                  <Link
+                  <a
                     href={link.href}
-                    className="hover:text-accent transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-focus"
+                    onClick={hashLink(link.href)}
+                    className="hover:text-accent transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-focus cursor-pointer"
                   >
                     {link.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -54,12 +66,13 @@ export function Footer() {
             <ul className="space-y-2 font-sans text-body-sm text-bone">
               {siteConfig.footer.navLinks.map((link) => (
                 <li key={link.label}>
-                  <Link
+                  <a
                     href={link.href}
-                    className="hover:text-accent transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-focus"
+                    onClick={hashLink(link.href)}
+                    className="hover:text-accent transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-focus cursor-pointer"
                   >
                     {link.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -82,20 +95,13 @@ export function Footer() {
                     >
                       {channel.label}
                     </a>
-                  ) : channel.isEmail ? (
+                  ) : (
                     <a
                       href={channel.href}
                       className="hover:text-accent transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-focus"
                     >
                       {channel.label}
                     </a>
-                  ) : (
-                    <Link
-                      href={channel.href}
-                      className="hover:text-accent transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-focus"
-                    >
-                      {channel.label}
-                    </Link>
                   )}
                 </li>
               ))}

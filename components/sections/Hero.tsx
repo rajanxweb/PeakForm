@@ -56,12 +56,16 @@ export function Hero() {
                   {hero.primaryCta.text.replace(" ↗", "")}
                 </Button>
 
-                <Link
+                <a
                   href={hero.secondaryCta.href}
-                  className="font-display text-[16px] font-bold uppercase tracking-wider text-ink hover:text-accent inline-flex items-center gap-1 transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-focus"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.querySelector(hero.secondaryCta.href)?.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }}
+                  className="font-display text-[16px] font-bold uppercase tracking-wider text-ink hover:text-accent inline-flex items-center gap-1 transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-focus cursor-pointer"
                 >
                   {hero.secondaryCta.text}
-                </Link>
+                </a>
               </div>
 
               <p className="font-mono text-label uppercase text-stone tracking-wider">
