@@ -1,110 +1,259 @@
 @import "tailwindcss";
 
-/* ============================================================
-   PeakForm Design System — CSS Custom Properties
-   Theme: "Kinetic Discipline"
-   ============================================================ */
+/* ==========================================================================
+   PeakForm Global Design System
+   Source of Truth: docs/PeakForm 02 · Design System.pdf & docs/DESIGN.md
+   Concept: The Training Logbook — Kinetic Discipline
+   ========================================================================== */
 
-@theme inline {
-  /* -----------------------------------------------------------
-     Fonts — injected by next/font/google via layout.tsx
-  ----------------------------------------------------------- */
-  --font-sans:      var(--font-instrument-sans), system-ui, sans-serif;
-  --font-headline:  var(--font-archivo), system-ui, sans-serif;
-  --font-mono:      var(--font-jetbrains-mono), "Courier New", monospace;
+/* --------------------------------------------------------------------------
+   1. Brand-Level Values & Root Variables
+   All brand-level colors are defined as CSS variables so site-config.ts
+   can override them for specific deployments if needed.
+   -------------------------------------------------------------------------- */
+:root {
+  /* Brand palette */
+  --brand-bone: #F3F0E8;          /* Default page background */
+  --brand-paper: #FBF9F4;         /* Form fields, raised light surfaces */
+  --brand-ink: #141412;           /* Primary text; dark sections */
+  --brand-ink-2: #1F1E1B;         /* Raised panels on dark sections */
+  --brand-stone: #5E5B52;         /* Secondary text on light */
+  --brand-stone-dark: #A8A498;    /* Secondary text on dark */
+  --brand-line: #D9D4C7;          /* Hairline rules on light */
+  --brand-line-dark: #34322D;     /* Hairline rules on dark */
+  --brand-field-border: #8A8678;  /* Input borders (passes 3:1 against paper) */
+  --brand-accent: #FF4B1F;        /* Buttons, highlights, key numerals */
+  --brand-accent-deep: #B5330A;   /* Accent-colored text or links on light */
+  --brand-error: #B42318;         /* Form errors on light */
 
-  /* -----------------------------------------------------------
-     Brand Palette
-  ----------------------------------------------------------- */
-  --color-bone:       #F4F1EA;   /* canvas / surface */
-  --color-ink:        #111111;   /* primary text / structural frames */
-  --color-accent:     #FF5500;   /* signal accent / CTAs */
-  --color-slate:      #6E6D68;   /* muted / secondary metrics */
-  --color-hairline:   #E5E2DA;   /* 1px borders on bone */
-  --color-heavy-ink:  #141414;   /* inverted surface */
-  --color-divider:    #262626;   /* dividers on dark modules */
-  --color-white:      #FFFFFF;
+  /* Semantic surface defaults (Light section) */
+  --surface: var(--brand-bone);
+  --on-surface: var(--brand-ink);
+  --muted: var(--brand-stone);
+  --rule: var(--brand-line);
+  --focus: var(--brand-ink);
 
-  /* Material Design token aliases (from code.html / DESIGN.md) */
-  --color-surface:                    #fcf9f2;
-  --color-surface-dim:                #dcdad3;
-  --color-surface-bright:             #fcf9f2;
-  --color-surface-container-lowest:   #ffffff;
-  --color-surface-container-low:      #f6f3ec;
-  --color-surface-container:          #f1eee7;
-  --color-surface-container-high:     #ebe8e1;
-  --color-surface-container-highest:  #e5e2db;
-  --color-on-surface:                 #1c1c18;
-  --color-on-surface-variant:         #5c4037;
-  --color-inverse-surface:            #31312c;
-  --color-inverse-on-surface:         #f3f0e9;
-  --color-outline:                    #907065;
-  --color-outline-variant:            #e5beb2;
-  --color-primary:                    #a63500;
-  --color-on-primary:                 #ffffff;
-  --color-primary-container:          #d04400;
-  --color-secondary:                  #5f5e5e;
-  --color-on-secondary:               #ffffff;
-  --color-secondary-container:        #e5e2e1;
-  --color-tertiary:                   #005ea3;
-  --color-on-tertiary:                #ffffff;
-  --color-error:                      #ba1a1a;
-  --color-on-error:                   #ffffff;
-  --color-error-container:            #ffdad6;
-  --color-background:                 #fcf9f2;
-  --color-on-background:              #1c1c18;
-
-  /* -----------------------------------------------------------
-     Spacing scale (from design system)
-  ----------------------------------------------------------- */
-  --spacing-gutter:          1rem;
-  --spacing-gutter-desktop:  1.5rem;
-  --spacing-margin:          1rem;
-  --spacing-margin-tablet:   2rem;
-  --spacing-margin-desktop:  3rem;
-  --spacing-xs:              0.25rem;
-  --spacing-sm:              0.5rem;
-  --spacing-md:              1rem;
-  --spacing-lg:              1.5rem;
-  --spacing-xl:              2.5rem;
-
-  /* -----------------------------------------------------------
-     Border radius — strictly zero (design system requirement)
-  ----------------------------------------------------------- */
-  --radius: 0px;
-
-  /* -----------------------------------------------------------
-     Max content width
-  ----------------------------------------------------------- */
-  --max-w-content: 1440px;
+  /* Font fallback stacks */
+  --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-instrument-sans, var(--font-instrument)), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono, var(--font-mono-jb)), ui-monospace, SFMono-Regular, monospace;
 }
 
-/* ============================================================
-   Base Reset & Typography Defaults
-   ============================================================ */
+/* --------------------------------------------------------------------------
+   2. Semantic Surface Themes
+   Sections use semantic tokens so any section can flip between light and dark
+   with a single class (.surface-light or .surface-ink).
+   -------------------------------------------------------------------------- */
+.surface-light {
+  --surface: var(--brand-bone);
+  --on-surface: var(--brand-ink);
+  --muted: var(--brand-stone);
+  --rule: var(--brand-line);
+  --focus: var(--brand-ink);
+  background-color: var(--surface);
+  color: var(--on-surface);
+}
 
+.surface-ink {
+  --surface: var(--brand-ink);
+  --on-surface: var(--brand-bone);
+  --muted: var(--brand-stone-dark);
+  --rule: var(--brand-line-dark);
+  --focus: var(--brand-accent);
+  background-color: var(--surface);
+  color: var(--on-surface);
+}
+
+/* --------------------------------------------------------------------------
+   3. Tailwind v4 @theme inline Token Registration
+   -------------------------------------------------------------------------- */
+@theme inline {
+  /* Enforce zero-radius: reset all rounded utility variants */
+  --radius-*: initial;
+
+  /* Brand Colors */
+  --color-bone: var(--brand-bone);
+  --color-paper: var(--brand-paper);
+  --color-ink: var(--brand-ink);
+  --color-ink-2: var(--brand-ink-2);
+  --color-stone: var(--brand-stone);
+  --color-stone-dark: var(--brand-stone-dark);
+  --color-line: var(--brand-line);
+  --color-line-dark: var(--brand-line-dark);
+  --color-field-border: var(--brand-field-border);
+  --color-accent: var(--brand-accent);
+  --color-accent-deep: var(--brand-accent-deep);
+  --color-error: var(--brand-error);
+
+  /* Semantic Color Tokens */
+  --color-surface: var(--surface);
+  --color-on-surface: var(--on-surface);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-focus: var(--focus);
+
+  /* Font Families */
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  /* Typography Scale Tokens */
+  --text-display-xl: clamp(2.5rem, 1.4rem + 4.6vw, 5.5rem);
+  --text-display-xl--line-height: 0.98;
+
+  --text-display-lg: clamp(2rem, 1.2rem + 3vw, 3.75rem);
+  --text-display-lg--line-height: 1.02;
+
+  --text-display-md: clamp(1.375rem, 1.1rem + 1vw, 2rem);
+  --text-display-md--line-height: 1.1;
+
+  --text-body-lg: 1.1875rem;
+  --text-body-lg--line-height: 1.55;
+
+  --text-body: 1rem;
+  --text-body--line-height: 1.6;
+
+  --text-body-sm: 0.875rem;
+  --text-body-sm--line-height: 1.5;
+
+  --text-label: 0.75rem;
+  --text-label--line-height: 1.3;
+
+  --text-numeral-xl: clamp(2.25rem, 1.6rem + 2.4vw, 3.75rem);
+  --text-numeral-xl--line-height: 1;
+}
+
+/* --------------------------------------------------------------------------
+   4. Explicit Typography Scale Utility Classes
+   Ensures exact weight, tracking, and font-family match the design system.
+   -------------------------------------------------------------------------- */
+@utility text-display-xl {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 1.4rem + 4.6vw, 5.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
+
+@utility text-display-lg {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 1.2rem + 3vw, 3.75rem);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  font-weight: 800;
+}
+
+@utility text-display-md {
+  font-family: var(--font-display);
+  font-size: clamp(1.375rem, 1.1rem + 1vw, 2rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  font-weight: 700;
+}
+
+@utility text-body-lg {
+  font-family: var(--font-sans);
+  font-size: 1.1875rem;
+  line-height: 1.55;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+@utility text-body {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+@utility text-body-sm {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+@utility text-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+@utility text-numeral-xl {
+  font-family: var(--font-mono);
+  font-size: clamp(2.25rem, 1.6rem + 2.4vw, 3.75rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --------------------------------------------------------------------------
+   5. Strict Shape, Depth & Architectural Rules
+   Absolute rectilinearity: border-radius: 0 !important universally.
+   No gradients, no glassmorphism / backdrop blur, no drop shadows.
+   -------------------------------------------------------------------------- */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }
 
-html,
+/* Base resets & typography behavior */
+html {
+  margin: 0;
+  padding: 0;
+  background-color: var(--surface);
+  color: var(--on-surface);
+}
+
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  background-color: var(--color-bone);
-  color: var(--color-ink);
-  font-family: var(--font-sans);
   overscroll-behavior: none;
 }
 
-/* Skip to main content link (a11y) */
+/* Headlines use sentence case and balanced wrapping */
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/* Paragraphs use pretty line wrapping with max 62ch width */
+p {
+  text-wrap: pretty;
+  max-width: 62ch;
+}
+
+/* Sticky header anchor offset */
+section[id] {
+  scroll-margin-top: 88px;
+}
+
+/* --------------------------------------------------------------------------
+   6. Accessibility & Focus Visible Outlines
+   High-contrast architectural focus ring with 2px offset.
+   -------------------------------------------------------------------------- */
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* Screen reader only utility (a11y) */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -128,15 +277,41 @@ body {
   overflow: visible;
   clip: auto;
   white-space: normal;
-  background: var(--color-ink);
-  color: var(--color-bone);
+  background: var(--brand-ink);
+  color: var(--brand-bone);
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-/* Remove scrollbar (matches code.html) */
+/* --------------------------------------------------------------------------
+   7. Motion & Reduced Motion Fallbacks
+   Smooth scroll only when reduced motion is not requested.
+   When prefers-reduced-motion: reduce is set, disable all animations.
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Remove decorative scrollbars */
 ::-webkit-scrollbar {
   display: none;
 }
