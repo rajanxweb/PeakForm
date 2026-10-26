@@ -1,3 +1,5 @@
-// components/sections/index.ts
-// Barrel export for page section components (Hero, StatsStrip, Programs, Coach, etc.)
-export {};
+export * from "./Hero";
+export * from "./StatsStrip";
+export * from "./Programs";
+export * from "./About";
+export * from "./Results";
