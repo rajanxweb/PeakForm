@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>PeakForm — High-Performance Athletic Coaching</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,700;0,800;1,700;1,800&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"secondary-fixed-dim":"#c8c6c5","on-tertiary-fixed-variant":"#004880","inverse-on-surface":"#f3f0e9","on-surface":"#1c1c18","tertiary-fixed":"#d2e4ff","surface-container-low":"#f6f3ec","secondary-container":"#e5e2e1","on-primary":"#ffffff","secondary":"#5f5e5e","primary-fixed":"#ffdbcf","surface-container-lowest":"#ffffff","on-error-container":"#93000a","on-secondary-fixed-variant":"#474646","surface-container-high":"#ebe8e1","error":"#ba1a1a","surface-dim":"#dcdad3","surface-bright":"#fcf9f2","inverse-surface":"#31312c","tertiary-fixed-dim":"#a1c9ff","tertiary-container":"#0077cd","primary-fixed-dim":"#ffb59c","surface-variant":"#e5e2db","outline-variant":"#e5beb2","on-secondary-container":"#656464","on-secondary":"#ffffff","on-tertiary":"#ffffff","secondary-fixed":"#e5e2e1","background":"#fcf9f2","surface-container":"#f1eee7","on-primary-container":"#fffbff","primary-container":"#d04400","primary":"#a63500","surface-tint":"#aa3600","outline":"#907065","on-primary-fixed":"#390c00","on-background":"#1c1c18","on-tertiary-container":"#fdfcff","on-error":"#ffffff","on-primary-fixed-variant":"#822700","error-container":"#ffdad6","tertiary":"#005ea3","surface-container-highest":"#e5e2db","surface":"#fcf9f2","inverse-primary":"#ffb59c","on-tertiary-fixed":"#001c37","on-surface-variant":"#5c4037","on-secondary-fixed":"#1c1b1b"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-tablet":"2rem","gutter-desktop":"1.5rem","margin":"1rem","space-lg":"1.5rem","margin-desktop":"3rem","space-sm":"0.5rem","space-md":"1rem","space-xs":"0.25rem","gutter":"1rem","space-xl":"2.5rem"},"fontFamily":{"body-md":["Inter"],"mono-metric-md":["JetBrains Mono"],"headline-xl":["Archivo Narrow"],"headline-lg":["Archivo Narrow"],"headline-sm":["Archivo Narrow"],"headline-md":["Archivo Narrow"],"label-caps":["JetBrains Mono"],"headline-lg-mobile":["Archivo Narrow"],"headline-xl-mobile":["Archivo Narrow"],"mono-metric-lg":["JetBrains Mono"],"body-sm":["Inter"],"body-lg":["Inter"]},"fontSize":{"body-md":["15px",{"lineHeight":"22px","fontWeight":"400"}],"mono-metric-md":["18px",{"lineHeight":"22px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-xl":["56px",{"lineHeight":"58px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-lg":["40px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"800"}],"headline-sm":["20px",{"lineHeight":"24px","letterSpacing":"0.01em","fontWeight":"700"}],"headline-md":["28px",{"lineHeight":"32px","letterSpacing":"0em","fontWeight":"700"}],"label-caps":["11px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"600"}],"headline-lg-mobile":["30px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"800"}],"headline-xl-mobile":["38px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"800"}],"mono-metric-lg":["32px",{"lineHeight":"36px","letterSpacing":"-0.03em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"26px","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><a class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary-container focus:text-on-primary focus:font-headline-sm focus:text-headline-sm focus:outline-none" href="#main-content">Skip to main content</a><header class="sticky top-0 z-50 w-full h-[72px] bg-surface/95 backdrop-blur-md border-b border-surface-container-highest"><div class="max-w-[1440px] h-full mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between"><a class="flex items-center gap-3 group focus:outline-none" data-path="landing" href="#"><svg aria-hidden="true" class="w-7 h-7 fill-primary-container flex-shrink-0" viewbox="0 0 24 24"><path d="M12 2L2 19.5H7.5L12 11.5L16.5 19.5H22L12 2Z"></path></svg><span class="font-headline-md text-headline-md tracking-tighter uppercase text-on-surface group-hover:text-primary-container transition-colors">PEAKFORM</span></a><nav class="hidden lg:flex items-center gap-8 h-full" data-active-classes="text-on-surface font-semibold border-b-2 border-primary-container"><a class="h-full flex items-center font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="programs" href="#programs">Programs</a><a class="h-full flex items-center font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="coach" href="#coach">Coach</a><a class="h-full flex items-center font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="results" href="#results">Results</a><a class="h-full flex items-center font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="#pricing">Pricing</a><a class="h-full flex items-center font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="faq" href="#faq">FAQ</a></nav><div class="flex items-center gap-4"><a class="h-[44px] px-6 bg-primary-container text-on-primary font-headline-sm text-headline-sm uppercase tracking-wider inline-flex items-center justify-center hover:bg-inverse-surface hover:text-surface transition-colors duration-150 focus:outline-none" href="#contact">Book intro call</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-[72px] bg-surface min-h-[calc(100vh-72px)]" id="main-content"><div class="flex flex-col w-full text-left">
+<!-- 1. SKIP TO MAIN CONTENT LINK -->
+<a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#111111] focus:text-[#F4F1EA] focus:font-label-caps focus:text-label-caps uppercase focus:outline-none" href="#content-start">
+    Skip to main content ↗
+  </a>
+<!-- ANCHOR TARGET FOR ACCESSIBILITY -->
+<div class="w-full" id="content-start"></div>
+<!-- 2. HERO SECTION (Surface: Bone / #fcf9f2) -->
+<section class="w-full bg-surface border-b border-surface-container-highest">
+<div class="max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-12 lg:py-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-gutter-desktop items-stretch">
+<!-- Left: Cols 1-7 -->
+<div class="lg:col-span-7 flex flex-col justify-between pr-0 lg:pr-8">
+<div>
+<div class="inline-flex items-center gap-2 mb-6">
+<span class="w-2 h-2 bg-[#FF5500]"></span>
+<p class="font-label-caps text-label-caps uppercase tracking-wider text-secondary">ONLINE STRENGTH COACHING · OVER 30</p>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface uppercase tracking-tight mb-8">
+              Stronger in <span class="bg-[#FF5500] text-[#111111] px-2 font-black inline-block">3</span> sessions a week.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-[62ch] mb-10 leading-relaxed">
+              Personalized strength training built around careers, kids, and old injuries. Direct 1:1 programming, video analysis, and clear weekly accountability.
+            </p>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-6 mb-4">
+<a class="h-[44px] px-7 bg-[#111111] text-[#F4F1EA] hover:bg-[#FF5500] hover:text-[#111111] font-headline-sm text-headline-sm uppercase tracking-wide inline-flex items-center justify-center transition-colors" href="#contact">
+                Book a free intro call ↗
+              </a>
+<a class="font-headline-sm text-headline-sm uppercase tracking-wide text-on-surface hover:text-[#FF5500] inline-flex items-center gap-1 transition-colors" href="#programs">
+                See the programs ↓
+              </a>
+</div>
+<p class="font-label-caps text-label-caps uppercase text-secondary">
+              No card. No sales script. 20 minutes direct with head coach.
+            </p>
+</div>
+</div>
+<!-- Right: Cols 8-12 -->
+<div class="lg:col-span-5 relative mt-8 lg:mt-0">
+<div class="w-full aspect-[4/5] bg-surface-container overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="Monochromatic black and white editorial photography of an athletic lifter gripping a heavy steel barbell with chalked hands inside a stark, minimalist training studio. Raw contrast, deep industrial shadows, crisp muscular focus, and architectural Swiss light precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtU3-mGR6oorhWCeBJ4Pb1Ixzhvrbd21lUxRvg8fcIYJ7Liot37x3elFU23yx-nQZA0CAR7u1IjFcotUNpRzflRj0lvPgd08dxsAQlUmdvQcD27y5ZgjvzBwxGDab8E_Vt-VKvLXpfPLcYd61eEn6D6EQS_yearymlipgS4HKLr1JWiPhvbta87-e95edVUjBN_10PKCsiPl8Dtka_VoGBhN8FqUD6_Iw4Tc6AI1MUhRg-ZL-2Zraqmw"/>
+<!-- Monochromatic Data Tag -->
+<div class="absolute bottom-4 left-4 bg-[#111111] text-[#F4F1EA] px-3 py-2 font-mono-metric-md text-body-sm uppercase tracking-wider flex items-center gap-2">
+<span class="w-2 h-2 bg-[#FF5500]"></span>
+<span>[■ WEEK 08 — SQUAT · 82.5 KG × 5]</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. STATS STRIP (Surface: Deep Ink / #111111) -->
+<section class="w-full bg-[#111111] text-[#F4F1EA]">
+<div class="max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-[#262626]">
+<!-- Stat 1 -->
+<div class="py-10 px-4 md:px-8 text-left flex flex-col justify-center">
+<span class="font-headline-xl text-headline-xl tracking-tight text-[#F4F1EA] mb-2 font-black">100%</span>
+<span class="font-label-caps text-label-caps text-[#888888] uppercase tracking-wider">1:1 COACH-WRITTEN PLANS</span>
+</div>
+<!-- Stat 2 -->
+<div class="py-10 px-4 md:px-8 text-left flex flex-col justify-center">
+<span class="font-headline-xl text-headline-xl tracking-tight text-[#F4F1EA] mb-2 font-black">3×</span>
+<span class="font-label-caps text-label-caps text-[#888888] uppercase tracking-wider">WEEKLY SESSIONS AVERAGE</span>
+</div>
+<!-- Stat 3 -->
+<div class="py-10 px-4 md:px-8 text-left flex flex-col justify-center">
+<span class="font-headline-xl text-headline-xl tracking-tight text-[#F4F1EA] mb-2 font-black">48 HR</span>
+<span class="font-label-caps text-label-caps text-[#888888] uppercase tracking-wider">FORM CHECK TURNAROUND</span>
+</div>
+<!-- Stat 4 -->
+<div class="py-10 px-4 md:px-8 text-left flex flex-col justify-center">
+<span class="font-headline-xl text-headline-xl tracking-tight text-[#FF5500] mb-2 font-black">0</span>
+<span class="font-label-caps text-label-caps text-[#888888] uppercase tracking-wider">NONSENSE OR DIET DOGMA</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. PROGRAMS (Surface: Light / Bone, id="programs") -->
+<section class="w-full bg-surface py-20 lg:py-28" id="programs">
+<div class="max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-gutter-desktop items-start">
+<!-- Sticky Header (Cols 1-4) -->
+<div class="lg:col-span-4 lg:sticky lg:top-[104px] pb-8 lg:pb-0">
+<div class="flex items-center gap-3 mb-4">
+<span class="font-label-caps text-label-caps uppercase text-secondary">02 — PROGRAMS</span>
+<span class="w-12 h-[1px] bg-surface-container-highest"></span>
+</div>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface mb-6 tracking-tight">Four ways to start.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[34ch] leading-relaxed">
+            Every track is delivered through our private portal with custom load-velocity targets, video-linked cues, and proactive load management.
+          </p>
+</div>
+<!-- Program Rows (Cols 5-12) -->
+<div class="lg:col-span-8 border-t border-surface-container-highest divide-y divide-surface-container-highest">
+<!-- Row 01 -->
+<a class="group block p-6 lg:p-8 transition-colors duration-150 bg-transparent hover:bg-[#111111]" href="#pricing">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline">
+<div class="md:col-span-2 font-headline-lg text-headline-lg font-black text-secondary group-hover:text-[#FF5500] transition-colors">
+                01
+              </div>
+<div class="md:col-span-6">
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface group-hover:text-[#F4F1EA] transition-colors mb-1">
+                  Strength Foundations
+                </h3>
+<p class="font-label-caps text-label-caps uppercase text-[#a63500] group-hover:text-[#FF5500] mb-3">
+                  For: first-timers, restarters
+                </p>
+<p class="font-body-md text-body-md text-on-surface-variant group-hover:text-[#c8c6c5] transition-colors">
+                  Learn the barbell lifts safely with deliberate progressive overload and joint-friendly assistance volume.
+                </p>
+</div>
+<div class="md:col-span-3 font-mono-metric-md text-body-md uppercase text-secondary group-hover:text-[#F4F1EA] md:text-right">
+                12 wks
+              </div>
+<div class="md:col-span-1 text-right font-headline-md text-headline-md text-on-surface group-hover:text-[#FF5500] transition-colors">
+                ↗
+              </div>
+</div>
+</a>
+<!-- Row 02 -->
+<a class="group block p-6 lg:p-8 transition-colors duration-150 bg-transparent hover:bg-[#111111]" href="#pricing">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline">
+<div class="md:col-span-2 font-headline-lg text-headline-lg font-black text-secondary group-hover:text-[#FF5500] transition-colors">
+                02
+              </div>
+<div class="md:col-span-6">
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface group-hover:text-[#F4F1EA] transition-colors mb-1">
+                  Fat Loss, Minus the Misery
+                </h3>
+<p class="font-label-caps text-label-caps uppercase text-[#a63500] group-hover:text-[#FF5500] mb-3">
+                  For: busy professionals
+                </p>
+<p class="font-body-md text-body-md text-on-surface-variant group-hover:text-[#c8c6c5] transition-colors">
+                  Preserve lean muscle while dropping body fat without extreme calorie cuts, endless cardio, or dining restrictions.
+                </p>
+</div>
+<div class="md:col-span-3 font-mono-metric-md text-body-md uppercase text-secondary group-hover:text-[#F4F1EA] md:text-right">
+                16 wks
+              </div>
+<div class="md:col-span-1 text-right font-headline-md text-headline-md text-on-surface group-hover:text-[#FF5500] transition-colors">
+                ↗
+              </div>
+</div>
+</a>
+<!-- Row 03 -->
+<a class="group block p-6 lg:p-8 transition-colors duration-150 bg-transparent hover:bg-[#111111]" href="#pricing">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline">
+<div class="md:col-span-2 font-headline-lg text-headline-lg font-black text-secondary group-hover:text-[#FF5500] transition-colors">
+                03
+              </div>
+<div class="md:col-span-6">
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface group-hover:text-[#F4F1EA] transition-colors mb-1">
+                  Longevity &amp; Pain-Free Movement
+                </h3>
+<p class="font-label-caps text-label-caps uppercase text-[#a63500] group-hover:text-[#FF5500] mb-3">
+                  For: masters athletes, desk workers
+                </p>
+<p class="font-body-md text-body-md text-on-surface-variant group-hover:text-[#c8c6c5] transition-colors">
+                  Fix nagging joint tweaks and restore hip, shoulder, and spinal durability through full-range loaded mobility.
+                </p>
+</div>
+<div class="md:col-span-3 font-mono-metric-md text-body-md uppercase text-secondary group-hover:text-[#F4F1EA] md:text-right">
+                Ongoing
+              </div>
+<div class="md:col-span-1 text-right font-headline-md text-headline-md text-on-surface group-hover:text-[#FF5500] transition-colors">
+                ↗
+              </div>
+</div>
+</a>
+<!-- Row 04 -->
+<a class="group block p-6 lg:p-8 transition-colors duration-150 bg-transparent hover:bg-[#111111]" href="#pricing">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline">
+<div class="md:col-span-2 font-headline-lg text-headline-lg font-black text-secondary group-hover:text-[#FF5500] transition-colors">
+                04
+              </div>
+<div class="md:col-span-6">
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface group-hover:text-[#F4F1EA] transition-colors mb-1">
+                  Custom 1:1 Coaching
+                </h3>
+<p class="font-label-caps text-label-caps uppercase text-[#a63500] group-hover:text-[#FF5500] mb-3">
+                  For: specific athletic or physique goals
+                </p>
+<p class="font-body-md text-body-md text-on-surface-variant group-hover:text-[#c8c6c5] transition-colors">
+                  Full individualized programming, daily communication, and weekly video call with complete lifestyle tailoring.
+                </p>
+</div>
+<div class="md:col-span-3 font-mono-metric-md text-body-md uppercase text-secondary group-hover:text-[#F4F1EA] md:text-right">
+                Monthly
+              </div>
+<div class="md:col-span-1 text-right font-headline-md text-headline-md text-on-surface group-hover:text-[#FF5500] transition-colors">
+                ↗
+              </div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. ABOUT (+ PHOTO BAND) (Surface: Light / Bone, id="coach") -->
+<section class="w-full bg-surface-container-low pt-20 border-t border-surface-container-highest" id="coach">
+<div class="max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop mb-16">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-gutter-desktop items-stretch">
+<!-- Coach Photo (Cols 1-5) -->
+<div class="lg:col-span-5">
+<div class="w-full aspect-[4/5] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="Monochrome studio portrait of a serious head strength coach in a dark athletic tee, standing against a clean concrete wall. Direct confident gaze, sharp directional studio lighting, zero decorative softness, high contrast Swiss visual aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3vCAfbK35D7LfBhZh5EZWI-0CCdtcR6srb4jrbpvMZ78VLLmQY78B8dEbOGsao4ppJilw9YHvI5Tp8ArHEwZShyXCDnEV_5bzMenxm3cUAG1AD61usHv1M7QeDlgOV3Qh5ukHEl8iwbyNFj0YuPPTrlm5yq0j6oVM3jyPs6nRo4wHAo_4h-RZwWZrq1HKg-ayeSf85_N0ik2UsjfhTFW-iBfUu5YdDHH8pegTdyPECXSIGwUCpYouJw"/>
+</div>
+</div>
+<!-- Coach Details (Cols 7-12) -->
+<div class="lg:col-span-7 flex flex-col justify-between pt-6 lg:pt-0">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="font-label-caps text-label-caps uppercase text-secondary">03 — THE COACH</span>
+<span class="w-12 h-[1px] bg-surface-container-highest"></span>
+</div>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface mb-6 tracking-tight">
+              Coaching that respects your calendar and your joints.
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 leading-relaxed">
+              Most online fitness advice is created by 22-year-olds who sleep nine hours a night and have never worked a 50-hour week. At PeakForm, programming is rooted in exercise mechanics, load autocalibration, and real-world sustainability.
+            </p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
+              We eliminate training junk. Every set in your logbook serves a purpose: elevating lean force production, protecting connective tissue, and keeping you resilient outside the gym.
+            </p>
+<!-- How I Coach -->
+<div class="border-t border-surface-container-highest divide-y divide-surface-container-highest mb-8">
+<div class="py-3 flex items-start gap-4">
+<span class="font-label-caps text-label-caps text-[#FF5500] font-black">01</span>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">Weekly adjustments based on recovery logs and video form submissions.</p>
+</div>
+<div class="py-3 flex items-start gap-4">
+<span class="font-label-caps text-label-caps text-[#FF5500] font-black">02</span>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">Zero cookie-cutter templates; load and volume autoregulated for fatigue.</p>
+</div>
+<div class="py-3 flex items-start gap-4">
+<span class="font-label-caps text-label-caps text-[#FF5500] font-black">03</span>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">Practical nutrition targets that don't isolate you from family dinners.</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container px-4 py-3">
+<p class="font-label-caps text-label-caps uppercase text-on-surface tracking-wider">
+              CSCS · USAW LVL 2 · 12 YEARS EXPERIENCE · 400+ ATHLETES COACHED
+            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Full-bleed photo band (21:9 ratio) -->
+<div class="w-full aspect-[21/9] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="Wide panoramic horizontal shot of calibrated cast iron Olympic weight plates racked along a heavy steel barbell stand in an empty, quiet strength training warehouse. Stark overhead lighting, deep shadows, crisp industrial floor texture, monochrome black and white palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfiZEey0BvCoSXCWKlEH4a5qizNsYYJZvufZ9w8HfPWWe3wuc9r5IRqlwo_aMGeWlsyBSoG4zJrX8MS4_EnW1KLjoce6jeDqK0r7rizD3UWX4REk2QyMBXXPnVMh1hH9m-H7LKnZ860GnyW0isWvxWhC6b7cGj7W280qzdhEDGiv3sXyJA6mC90RahxzNbgi6nMn5nPWUy1TlRW9prhQFzQcU1SRe1BUCphWkTDAfecr1CJOPoz4ONBQ"/>
+</div>
+</section>
+<!-- 6. CLIENT RESULTS (Surface: Ink / #111111, id="results") -->
+<section class="w-full bg-[#111111] text-[#F4F1EA] py-20 lg:py-28" id="results">
+<div class="max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="mb-12">
+<div class="flex items-center gap-3 mb-4">
+<span class="font-label-caps text-label-caps uppercase text-[#888888]">04 — CLIENT RESULTS</span>
+<span class="w-12 h-[1px] bg-[#262626]"></span>
+</div>
+<h2 class="font-headline-lg text-headline-lg uppercase text-[#F4F1EA] mb-4 tracking-tight">
+          Numbers, not before-and-after photos.
+        </h2>
+<p class="font-body-md text-body-md text-[#888888] max-w-[54ch]">
+          Lighting tricks and dehydrated selfies don't measure capability. Here is audited performance data from busy clients with demanding careers.
+        </p>
+</div>
+<!-- 3 Full-Width Stacked Log Entries -->
+<div class="border-t border-[#262626] divide-y divide-[#262626]">
+<!-- Entry 1 -->
+<div class="py-8 grid grid-cols-1 lg:grid-cols-12 gap-6 items-baseline">
+<div class="lg:col-span-4">
+<span class="font-headline-sm text-headline-sm text-[#F4F1EA] uppercase block mb-1">Priya S., 38</span>
+<span class="font-body-sm text-body-sm text-[#888888] block mb-2">Product Manager · 16 Weeks</span>
+<span class="font-label-caps text-label-caps text-[#FF5500] uppercase block">Goal: Carry toddler without back strain</span>
+</div>
+<div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-6 bg-[#181818] p-6">
+<div>
+<span class="font-label-caps text-label-caps text-[#888888] uppercase block mb-1">TRAP-BAR DEADLIFT</span>
+<span class="font-mono-metric-md text-mono-metric-md text-[#F4F1EA]">40 KG → <span class="text-[#FF5500]">85 KG</span></span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-[#888888] uppercase block mb-1">SESSIONS PER WEEK</span>
+<span class="font-mono-metric-md text-mono-metric-md text-[#F4F1EA]">1 → <span class="text-[#FF5500]">3 DEDICATED</span></span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-[#888888] uppercase block mb-1">RESTING HEART RATE</span>
+<span class="font-mono-metric-md text-mono-metric-md text-[#F4F1EA]">76 → <span class="text-[#FF5500]">64 BPM</span></span>
+</div>
+</div>
+</div>
+<!-- Entry 2 -->
+<div class="py-8 grid grid-cols-1 lg:grid-cols-12 gap-6 items-baseline">
+<div class="lg:col-span-4">
+<span class="font-headline-sm text-headline-sm text-[#F4F1EA] uppercase block mb-1">Marcus T., 44</span>
+<span class="font-body-sm text-body-sm text-[#888888] block mb-2">Architecture Director · 24 Weeks</span>
+<span class="font-label-caps text-label-caps text-[#FF5500] uppercase block">Goal: Desk career posture &amp; athletic baseline</span>
+</div>
+<div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-6 bg-[#181818] p-6">
+<div>
+<span class="font-label-caps text-label-caps text-[#888888] uppercase block mb-1">BACK SQUAT</span>
+<span class="font-mono-metric-md text-mono-metric-md text-[#F4F1EA]">60 KG → <span class="text-[#FF5500]">115 KG</span></span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-[#888888] uppercase block mb-1">BODY WEIGHT COMP</span>
+<span class="font-mono-metric-md text-mono-metric-md text-[#F4F1EA]">94 KG → <span class="text-[#FF5500]">86 KG</span></span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-[#888888] uppercase block mb-1">OVERHEAD PRESS</span>
+<span class="font-mono-metric-md text-mono-metric-md text-[#F4F1EA]">35 KG → <span class="text-[#FF5500]">52.5 KG</span></span>
+</div>
+</div>
+</div>
+<!-- Entry 3 -->
+<div class="py-8 grid grid-cols-1 lg:grid-cols-12 gap-6 items-baseline">
+<div class="lg:col-span-4">
+<span class="font-headline-sm text-headline-sm text-[#F4F1EA] uppercase block mb-1">Elena R., 31</span>
+<span class="font-body-sm text-body-sm text-[#888888] block mb-2">Software Engineer · 12 Weeks</span>
+<span class="font-label-caps text-label-caps text-[#FF5500] uppercase block">Goal: Complete first unassisted pull-up</span>
+</div>
+<div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-6 bg-[#181818] p-6">
+<div>
+<span class="font-label-caps text-label-caps text-[#888888] uppercase block mb-1">STRICT PULL-UPS</span>
+<span class="font-mono-metric-md text-mono-metric-md text-[#F4F1EA]">0 → <span class="text-[#FF5500]">5 REPS</span></span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-[#888888] uppercase block mb-1">BARBELL HIP THRUST</span>
+<span class="font-mono-metric-md text-mono-metric-md text-[#F4F1EA]">65 KG → <span class="text-[#FF5500]">130 KG</span></span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-[#888888] uppercase block mb-1">ANKLE MOBILITY ROM</span>
+<span class="font-mono-metric-md text-mono-metric-md text-[#F4F1EA]">LIMITED → <span class="text-[#FF5500]">FULL DEPTH</span></span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-[#262626]">
+<p class="font-label-caps text-label-caps uppercase text-[#666666]">
+          Sample content for portfolio demonstration. Individual results vary.
+        </p>
+</div>
+</div>
+</section>
+<!-- 7. PRICING (Surface: Light / Bone, id="pricing") -->
+<section class="w-full bg-surface py-20 lg:py-28" id="pricing">
+<div class="max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<!-- Pricing Header -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-12 border-b border-surface-container-highest">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="font-label-caps text-label-caps uppercase text-secondary">05 — PRICING</span>
+<span class="w-12 h-[1px] bg-surface-container-highest"></span>
+</div>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-tight">Clear monthly rates. No contracts.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[48ch] mt-2">
+            No initiation fees. Change tracks or pause whenever life demands it.
+          </p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps uppercase text-secondary">
+            Billed monthly via Stripe. Cancel anytime with 7 days notice.
+          </p>
+</div>
+</div>
+<!-- 3-Column Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 pt-12 items-end">
+<!-- Col 1: The Blueprint -->
+<div class="bg-surface-container-low p-8 flex flex-col justify-between h-[560px]">
+<div>
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-caps text-label-caps uppercase text-secondary">TIER 01</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface">SELF-PACED</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface mb-2">The Blueprint</h3>
+<div class="font-mono-metric-lg text-mono-metric-lg font-bold text-on-surface mb-4">
+              $149 <span class="font-body-sm text-body-sm text-secondary font-normal">/ mo</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 pb-6 border-b border-surface-container-highest">
+              Self-guided structured program with weekly asynchronous check-in.
+            </p>
+<ul class="space-y-3 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-[#111111]"></span> 3-day structured mesocycle
+              </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-[#111111]"></span> PeakForm logging mobile app
+              </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-[#111111]"></span> Weekly form-check submission
+              </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-[#111111]"></span> Monthly load recalibration
+              </li>
+</ul>
+</div>
+<div>
+<a class="w-full h-[44px] bg-transparent border border-[#111111] text-[#111111] hover:bg-[#111111] hover:text-[#F4F1EA] font-headline-sm text-headline-sm uppercase tracking-wide inline-flex items-center justify-center transition-colors" href="#contact">
+              Get the Blueprint
+            </a>
+</div>
+</div>
+<!-- Col 2: Dedicated 1:1 (INVERTED HIGHLIGHTED TIER: +24px taller height) -->
+<div class="bg-[#111111] text-[#F4F1EA] p-8 flex flex-col justify-between h-[584px] relative">
+<!-- Top Tag -->
+<div class="absolute -top-3 left-8 bg-[#FF5500] text-[#111111] px-3 py-1 font-label-caps text-label-caps uppercase font-bold tracking-wider">
+            [MOST CHOSEN]
+          </div>
+<div>
+<div class="flex justify-between items-center mb-4 mt-2">
+<span class="font-label-caps text-label-caps uppercase text-[#888888]">TIER 02</span>
+<span class="font-label-caps text-label-caps uppercase text-[#FF5500]">FULL 1:1 COACHING</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-[#F4F1EA] mb-2">Dedicated 1:1</h3>
+<div class="font-mono-metric-lg text-mono-metric-lg font-bold text-[#F4F1EA] mb-4">
+              $289 <span class="font-body-sm text-body-sm text-[#888888] font-normal">/ mo</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#c8c6c5] mb-6 pb-6 border-b border-[#262626]">
+              Full personal programming, asynchronous video review, bi-weekly check-ins.
+            </p>
+<ul class="space-y-3 font-body-sm text-body-sm text-[#F4F1EA]">
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-[#FF5500]"></span> 100% custom calendarized schedule
+              </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-[#FF5500]"></span> 48-hr video critique turnaround
+              </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-[#FF5500]"></span> Bi-weekly live video consults
+              </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-[#FF5500]"></span> Daily WhatsApp coach access
+              </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-[#FF5500]"></span> Custom travel workout swaps
+              </li>
+</ul>
+</div>
+<div>
+<a class="w-full h-[44px] bg-[#FF5500] text-[#111111] hover:bg-[#F4F1EA] hover:text-[#111111] font-headline-sm text-headline-sm uppercase tracking-wide font-black inline-flex items-center justify-center transition-colors" href="#contact">
+              Start coaching
+            </a>
+</div>
+</div>
+<!-- Col 3: Elite Mentorship -->
+<div class="bg-surface-container-low p-8 flex flex-col justify-between h-[560px]">
+<div>
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-caps text-label-caps uppercase text-secondary">TIER 03</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface">HIGH TOUCH</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface mb-2">Elite Mentorship</h3>
+<div class="font-mono-metric-lg text-mono-metric-lg font-bold text-on-surface mb-4">
+              $449 <span class="font-body-sm text-body-sm text-secondary font-normal">/ mo</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 pb-6 border-b border-surface-container-highest">
+              Comprehensive high-touch training, daily messaging, nutrition protocol.
+            </p>
+<ul class="space-y-3 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-[#111111]"></span> Everything in Dedicated 1:1
+              </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-[#111111]"></span> Precision macronutrient blueprints
+              </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-[#111111]"></span> Weekly 30-min strategy calls
+              </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-[#111111]"></span> Direct voice-note coach access
+              </li>
+</ul>
+</div>
+<div>
+<a class="w-full h-[44px] bg-transparent border border-[#111111] text-[#111111] hover:bg-[#111111] hover:text-[#F4F1EA] font-headline-sm text-headline-sm uppercase tracking-wide inline-flex items-center justify-center transition-colors" href="#contact">
+              Apply for 1:1
+            </a>
+</div>
+</div>
+</div>
+<div class="mt-12 text-left">
+<p class="font-label-caps text-label-caps uppercase text-secondary">
+          14-day full satisfaction guarantee. All cancellations processed instantly without friction.
+        </p>
+</div>
+</div>
+</section>
+<!-- 8. TESTIMONIALS (Surface: Ink / #111111) -->
+<section class="w-full bg-[#111111] text-[#F4F1EA] py-20 lg:py-28 border-t border-[#262626]">
+<div class="max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="flex items-center gap-3 mb-12">
+<span class="font-label-caps text-label-caps uppercase text-[#888888]">06 — ATHLETE VOICES</span>
+<span class="w-12 h-[1px] bg-[#262626]"></span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-gutter-desktop items-stretch">
+<!-- Cols 1-7: Featured Big Quote -->
+<div class="lg:col-span-7 flex flex-col justify-between pr-0 lg:pr-8 pb-10 lg:pb-0">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-[#FF5500] block mb-6">CHECK-IN · WEEK 18</span>
+<blockquote class="font-headline-lg text-headline-lg uppercase text-[#F4F1EA] tracking-tight leading-tight mb-8">
+              “PeakForm gave me back the physical confidence I lost sitting behind two monitors for ten years. No fluff, just heavy compound lifts that work.”
+            </blockquote>
+</div>
+<div class="flex items-center gap-4 pt-6 border-t border-[#262626]">
+<div class="w-10 h-10 bg-[#262626] text-[#F4F1EA] font-mono-metric-md flex items-center justify-center">
+              DM
+            </div>
+<div>
+<p class="font-body-sm text-body-sm font-semibold text-[#F4F1EA]">David Miller</p>
+<p class="font-label-caps text-label-caps uppercase text-[#888888]">VP of Engineering</p>
+</div>
+</div>
+</div>
+<!-- Cols 8-12: Two Stacked Shorter Quotes -->
+<div class="lg:col-span-5 flex flex-col justify-between divide-y divide-[#262626] border-t lg:border-t-0 lg:border-l border-[#262626] pl-0 lg:pl-8">
+<!-- Quote 1 -->
+<div class="pb-8 pt-8 lg:pt-0">
+<span class="font-label-caps text-label-caps uppercase text-[#888888] block mb-3">CHECK-IN · WEEK 06</span>
+<p class="font-body-lg text-body-lg text-[#F4F1EA] mb-6 leading-relaxed">
+              “The video form critiques alone are worth triple the subscription. Fixed my knee cave in two weeks.”
+            </p>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-[#262626] text-[#F4F1EA] font-mono-metric-md text-body-sm flex items-center justify-center">
+                SL
+              </div>
+<div>
+<p class="font-body-sm text-body-sm font-semibold text-[#F4F1EA]">Sarah Lin</p>
+<p class="font-label-caps text-label-caps uppercase text-[#888888]">Startup Founder</p>
+</div>
+</div>
+</div>
+<!-- Quote 2 -->
+<div class="pt-8">
+<span class="font-label-caps text-label-caps uppercase text-[#888888] block mb-3">CHECK-IN · WEEK 12</span>
+<p class="font-body-lg text-body-lg text-[#F4F1EA] mb-6 leading-relaxed">
+              “First coach who didn't try to put me on chicken and broccoli. Strength up 40% while traveling weekly.”
+            </p>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-[#262626] text-[#F4F1EA] font-mono-metric-md text-body-sm flex items-center justify-center">
+                JK
+              </div>
+<div>
+<p class="font-body-sm text-body-sm font-semibold text-[#F4F1EA]">James Kwon</p>
+<p class="font-label-caps text-label-caps uppercase text-[#888888]">Product Designer</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-6 border-t border-[#262626]">
+<p class="font-label-caps text-label-caps uppercase text-[#666666]">Sample content for portfolio demonstration.</p>
+</div>
+</div>
+</section>
+<!-- 9. FAQ (Surface: Light / Bone, id="faq") -->
+<section class="w-full bg-surface py-20 lg:py-28 border-t border-surface-container-highest" id="faq">
+<div class="max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-gutter-desktop items-start">
+<!-- Sticky Header (Cols 1-4) -->
+<div class="lg:col-span-4 lg:sticky lg:top-[104px] pb-8 lg:pb-0">
+<div class="flex items-center gap-3 mb-4">
+<span class="font-label-caps text-label-caps uppercase text-secondary">07 — FAQ</span>
+<span class="w-12 h-[1px] bg-surface-container-highest"></span>
+</div>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface mb-4 tracking-tight">
+            Common questions before starting.
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[32ch]">
+            Direct answers regarding gym requirements, time commitments, and injury management.
+          </p>
+</div>
+<!-- Accordions (Cols 5-12) -->
+<div class="lg:col-span-8 border-t border-surface-container-highest divide-y divide-surface-container-highest">
+<!-- Item 1 (Open by default) -->
+<details class="group py-6 [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer" open="">
+<summary class="flex justify-between items-center text-left list-none focus:outline-none">
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface pr-4">
+                Do I need access to a commercial gym?
+              </h3>
+<span class="font-mono-metric-md text-mono-metric-md text-secondary group-open:rotate-45 transition-transform duration-200">
+                +
+              </span>
+</summary>
+<div class="pt-4 pr-12">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                A basic commercial gym or home gym with a barbell, rack, plates, adjustable bench, and pull-up station is ideal. If you only have kettlebells or dumbbells, we can build custom programming for your equipment inventory during the initial onboarding assessment.
+              </p>
+</div>
+</details>
+<!-- Item 2 -->
+<details class="group py-6 [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer">
+<summary class="flex justify-between items-center text-left list-none focus:outline-none">
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface pr-4">
+                How do the weekly video check-ins work?
+              </h3>
+<span class="font-mono-metric-md text-mono-metric-md text-secondary group-open:rotate-45 transition-transform duration-200">
+                +
+              </span>
+</summary>
+<div class="pt-4 pr-12">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                You record your top working sets on your phone and upload them to our secure client portal. Within 48 hours, I return an annotated video with voiceover feedback highlighting bar path, joint angles, tempo, and cues for the following week.
+              </p>
+</div>
+</details>
+<!-- Item 3 -->
+<details class="group py-6 [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer">
+<summary class="flex justify-between items-center text-left list-none focus:outline-none">
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface pr-4">
+                What if I have an old shoulder or lumbar disc issue?
+              </h3>
+<span class="font-mono-metric-md text-mono-metric-md text-secondary group-open:rotate-45 transition-transform duration-200">
+                +
+              </span>
+</summary>
+<div class="pt-4 pr-12">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Over 70% of our clients enter with prior joint irritations. We adjust exercise variations (e.g., trap-bar deadlifts instead of conventional, safety squat bars, or floor presses) to load the target musculature without flaring joint inflammation.
+              </p>
+</div>
+</details>
+<!-- Item 4 -->
+<details class="group py-6 [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer">
+<summary class="flex justify-between items-center text-left list-none focus:outline-none">
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface pr-4">
+                How much time do workouts take each week?
+              </h3>
+<span class="font-mono-metric-md text-mono-metric-md text-secondary group-open:rotate-45 transition-transform duration-200">
+                +
+              </span>
+</summary>
+<div class="pt-4 pr-12">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Workouts are designed around three 45-to-60-minute sessions per week. We program precise warm-ups and supersets to maximize efficiency so you aren't lingering in the weight room.
+              </p>
+</div>
+</details>
+<!-- Item 5 -->
+<details class="group py-6 [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer">
+<summary class="flex justify-between items-center text-left list-none focus:outline-none">
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface pr-4">
+                Can I pause my coaching if I travel for work?
+              </h3>
+<span class="font-mono-metric-md text-mono-metric-md text-secondary group-open:rotate-45 transition-transform duration-200">
+                +
+              </span>
+</summary>
+<div class="pt-4 pr-12">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Yes. You can freeze your account for up to 30 continuous days per year. If traveling for short stints, we simply push hotel-gym or travel deload workouts to your app.
+              </p>
+</div>
+</details>
+<!-- Item 6 -->
+<details class="group py-6 [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer">
+<summary class="flex justify-between items-center text-left list-none focus:outline-none">
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface pr-4">
+                What is the cancellation policy?
+              </h3>
+<span class="font-mono-metric-md text-mono-metric-md text-secondary group-open:rotate-45 transition-transform duration-200">
+                +
+              </span>
+</summary>
+<div class="pt-4 pr-12">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                All memberships are billed on a flexible 30-day recurring basis with zero lock-in contracts. You can cancel directly from your profile settings with 7 days' advance notice before renewal.
+              </p>
+</div>
+</details>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. FINAL CTA (Surface: Ink / #111111 with 8px orange accent bar on top) -->
+<section class="w-full bg-[#111111] text-[#F4F1EA] relative">
+<!-- Top 8px Accent Bar -->
+<div class="w-full h-2 bg-[#FF5500]"></div>
+<div class="max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-20 lg:py-28">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-gutter-desktop items-center">
+<!-- Cols 1-8: Display H2 -->
+<div class="lg:col-span-8">
+<h2 class="font-headline-xl text-headline-xl uppercase text-[#F4F1EA] tracking-tight leading-tight mb-4">
+            Ready to stop guessing in the weight room?
+          </h2>
+</div>
+<!-- Cols 9-12: Copy & Action -->
+<div class="lg:col-span-4 flex flex-col justify-start gap-6">
+<p class="font-body-md text-body-md text-[#c8c6c5] leading-relaxed">
+            Grab a 20-minute intro call. We'll map your goals, current baseline, and the exact roadmap.
+          </p>
+<a class="h-[44px] px-8 bg-[#FF5500] text-[#111111] hover:bg-[#F4F1EA] hover:text-[#111111] font-headline-sm text-headline-sm uppercase tracking-wide font-black inline-flex items-center justify-center transition-colors" href="#contact">
+            Book your intro call ↗
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- 11. CONTACT FORM (Surface: Light / Bone, id="contact") -->
+<section class="w-full bg-surface py-20 lg:py-28 border-t border-surface-container-highest" id="contact">
+<div class="max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-gutter-desktop items-start">
+<!-- Left: Cols 1-5 -->
+<div class="lg:col-span-5 pr-0 lg:pr-8">
+<div class="flex items-center gap-3 mb-4">
+<span class="font-label-caps text-label-caps uppercase text-secondary">09 — BOOK A CALL</span>
+<span class="w-12 h-[1px] bg-surface-container-highest"></span>
+</div>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface mb-6 tracking-tight">
+            Tell me where you are.
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-10 leading-relaxed">
+            No automated emails, no junior intake coordinators. Your message goes directly to my screen.
+          </p>
+<div class="space-y-6 border-t border-surface-container-highest pt-6">
+<span class="font-label-caps text-label-caps uppercase text-secondary block">WHAT HAPPENS NEXT</span>
+<div class="flex items-start gap-4">
+<span class="font-mono-metric-md text-mono-metric-md text-[#FF5500] font-black">1</span>
+<div>
+<p class="font-headline-sm text-headline-sm uppercase text-on-surface">I read your message</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Reviewing your athletic history, past injuries, and current schedule.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="font-mono-metric-md text-mono-metric-md text-[#FF5500] font-black">2</span>
+<div>
+<p class="font-headline-sm text-headline-sm uppercase text-on-surface">I reply in 24 hours</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Direct email response with available intro call slots.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="font-mono-metric-md text-mono-metric-md text-[#FF5500] font-black">3</span>
+<div>
+<p class="font-headline-sm text-headline-sm uppercase text-on-surface">We talk for 20 minutes</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">A focused discussion to see if we're an authentic fit.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Form (Cols 7-12) -->
+<div class="lg:col-span-7 bg-surface-container-low p-8 lg:p-12 border border-surface-container-highest mt-8 lg:mt-0">
+<form class="space-y-6" id="intro-form" onsubmit="event.preventDefault(); document.getElementById('form-feedback').classList.remove('hidden');">
+<!-- Honeypot -->
+<input autocomplete="off" class="hidden" name="_hp" tabindex="-1" type="text"/>
+<!-- Name -->
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface mb-2 tracking-wider" for="client-name">
+                Full Name *
+              </label>
+<input class="w-full h-12 bg-surface px-4 text-on-surface font-body-md border border-[#111111] focus:border-[#FF5500] focus:outline-none" id="client-name" placeholder="e.g. Alex Morgan" required="" type="text"/>
+</div>
+<!-- Email -->
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface mb-2 tracking-wider" for="client-email">
+                Email Address *
+              </label>
+<input class="w-full h-12 bg-surface px-4 text-on-surface font-body-md border border-[#111111] focus:border-[#FF5500] focus:outline-none" id="client-email" placeholder="alex@company.com" required="" type="email"/>
+</div>
+<!-- Main Goal -->
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface mb-2 tracking-wider" for="client-goal">
+                Primary Goal *
+              </label>
+<select class="w-full h-12 bg-surface px-4 text-on-surface font-body-md border border-[#111111] focus:border-[#FF5500] focus:outline-none" id="client-goal">
+<option value="stronger">Get stronger (barbell compounds)</option>
+<option value="fat-loss">Lose fat &amp; maintain lean muscle</option>
+<option value="mobility">Move without nagging joint pain</option>
+<option value="not-sure">Not sure yet / Need guidance</option>
+</select>
+</div>
+<!-- Message with character counter -->
+<div>
+<div class="flex justify-between items-center mb-2">
+<label class="font-label-caps text-label-caps uppercase text-on-surface tracking-wider" for="client-message">
+                  Current Situation &amp; Obstacles (Optional)
+                </label>
+<span class="font-label-caps text-label-caps text-secondary" id="char-count">0 / 600</span>
+</div>
+<textarea class="w-full bg-surface p-4 text-on-surface font-body-md border border-[#111111] focus:border-[#FF5500] focus:outline-none resize-none" id="client-message" maxlength="600" oninput="document.getElementById('char-count').innerText = this.value.length + ' / 600'" placeholder="Share your current training, injuries, or what has held you back recently..." rows="4"></textarea>
+</div>
+<!-- Submit Button -->
+<div>
+<button class="w-full h-[44px] bg-[#111111] text-[#F4F1EA] hover:bg-[#FF5500] hover:text-[#111111] font-headline-sm text-headline-sm uppercase tracking-wide inline-flex items-center justify-center transition-colors" type="submit">
+                Send message ↗
+              </button>
+</div>
+<p class="font-label-caps text-label-caps uppercase text-secondary">
+              Your email is never shared or added to marketing blasts.
+            </p>
+<!-- Success Mockup Banner -->
+<div class="hidden p-4 bg-[#111111] text-[#F4F1EA] border-l-4 border-[#FF5500]" id="form-feedback">
+<p class="font-label-caps text-label-caps uppercase text-[#FF5500] mb-1">INQUIRY RECEIVED</p>
+<p class="font-body-sm text-body-sm">Thank you. I will review your notes and reply within 24 hours with schedule options.</p>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- 12. FOOTER (Surface: Ink / #111111) -->
+<footer class="w-full bg-[#111111] text-[#F4F1EA] border-t border-[#262626]">
+<div class="max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-16">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop mb-16">
+<!-- Col 1: Wordmark & Bio -->
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="w-3 h-3 bg-[#FF5500]"></span>
+<span class="font-headline-md text-headline-md tracking-tighter uppercase text-[#F4F1EA]">PEAKFORM</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#888888] leading-relaxed max-w-[28ch]">
+            Online strength coaching built for longevity, durability, and real-life schedules.
+          </p>
+</div>
+<!-- Col 2: Programs -->
+<div>
+<h4 class="font-label-caps text-label-caps uppercase text-[#888888] mb-4">Programs</h4>
+<ul class="space-y-2 font-body-sm text-body-sm text-[#c8c6c5]">
+<li><a class="hover:text-[#FF5500] transition-colors" href="#programs">Foundations (12 Wks)</a></li>
+<li><a class="hover:text-[#FF5500] transition-colors" href="#programs">Fat Loss Protocol (16 Wks)</a></li>
+<li><a class="hover:text-[#FF5500] transition-colors" href="#programs">Pain-Free Durability</a></li>
+<li><a class="hover:text-[#FF5500] transition-colors" href="#programs">1:1 Dedicated Coaching</a></li>
+</ul>
+</div>
+<!-- Col 3: Navigation -->
+<div>
+<h4 class="font-label-caps text-label-caps uppercase text-[#888888] mb-4">Navigation</h4>
+<ul class="space-y-2 font-body-sm text-body-sm text-[#c8c6c5]">
+<li><a class="hover:text-[#FF5500] transition-colors" href="#coach">Coach Philosophy</a></li>
+<li><a class="hover:text-[#FF5500] transition-colors" href="#results">Audited Results</a></li>
+<li><a class="hover:text-[#FF5500] transition-colors" href="#pricing">Pricing Matrix</a></li>
+<li><a class="hover:text-[#FF5500] transition-colors" href="#faq">FAQ</a></li>
+<li><a class="hover:text-[#FF5500] transition-colors" href="#contact">Direct Contact</a></li>
+</ul>
+</div>
+<!-- Col 4: Channels -->
+<div>
+<h4 class="font-label-caps text-label-caps uppercase text-[#888888] mb-4">Channels</h4>
+<ul class="space-y-2 font-body-sm text-body-sm text-[#c8c6c5]">
+<li><a class="hover:text-[#FF5500] transition-colors" href="#">Instagram ↗</a></li>
+<li><a class="hover:text-[#FF5500] transition-colors" href="#">YouTube Video Logs ↗</a></li>
+<li><a class="hover:text-[#FF5500] transition-colors" href="mailto:coach@peakform.demo">coach@peakform.demo</a></li>
+</ul>
+</div>
+</div>
+<!-- Bottom Row -->
+<div class="pt-8 border-t border-[#262626] flex flex-col md:flex-row items-center justify-between gap-4 text-left">
+<p class="font-label-caps text-label-caps uppercase text-[#888888]">
+          © 2025 PeakForm Coaching. All rights reserved.
+        </p>
+<p class="font-label-caps text-label-caps uppercase text-[#666666]">
+          Sample content for portfolio demonstration.
+        </p>
+</div>
+</div>
+</footer>
+</div></main><footer class="w-full bg-surface-container border-t border-surface-container-highest"><div class="max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-16"><div class="grid grid-cols-1 md:grid-cols-4 gap-gutter-desktop mb-12"><div class="md:col-span-1"><div class="flex items-center gap-2 mb-4"><svg aria-hidden="true" class="w-6 h-6 fill-primary-container" viewbox="0 0 24 24"><path d="M12 2L2 19.5H7.5L12 11.5L16.5 19.5H22L12 2Z"></path></svg><span class="font-headline-md text-headline-md tracking-tighter uppercase text-on-surface">PEAKFORM</span></div><p class="font-body-sm text-body-sm text-secondary">High-performance athletic coaching and performance diagnostics built on Swiss precision.</p></div><div><h4 class="font-label-caps text-label-caps uppercase text-secondary mb-4">Performance Programs</h4><ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-on-surface transition-colors" href="#">Strength Protocol</a></li><li><a class="hover:text-on-surface transition-colors" href="#">Hypertrophy Focus</a></li><li><a class="hover:text-on-surface transition-colors" href="#">Elite Conditioning</a></li><li><a class="hover:text-on-surface transition-colors" href="#">Return to Sport</a></li></ul></div><div><h4 class="font-label-caps text-label-caps uppercase text-secondary mb-4">Methodology</h4><ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-on-surface transition-colors" href="#">Load Velocity Profiling</a></li><li><a class="hover:text-on-surface transition-colors" href="#">Diagnostics</a></li><li><a class="hover:text-on-surface transition-colors" href="#">Coach Directory</a></li><li><a class="hover:text-on-surface transition-colors" href="#">Pricing Matrix</a></li></ul></div><div><h4 class="font-label-caps text-label-caps uppercase text-secondary mb-4">Consultation</h4><p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Intake evaluations conducted quarterly via private call.</p><a class="inline-block font-label-caps text-label-caps uppercase tracking-wider text-primary border-b border-primary hover:border-transparent transition-colors" href="#contact">Schedule Diagnostics</a></div></div><div class="pt-8 border-t border-surface-container-highest flex flex-col md:flex-row items-center justify-between gap-4"><p class="font-mono-metric-md text-body-sm text-secondary">© 2025 PEAKFORM ATHLETIC ARCHITECTURE. ALL RIGHTS RESERVED.</p><div class="flex gap-6 font-label-caps text-label-caps uppercase text-secondary"><a class="hover:text-on-surface transition-colors" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" href="#">Terms of Service</a><a class="hover:text-on-surface transition-colors" href="#">Intake Protocol</a></div></div></div></footer></body></html>

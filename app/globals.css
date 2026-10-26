@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+/* ============================================================
+   PeakForm Design System — CSS Custom Properties
+   Theme: "Kinetic Discipline"
+   ============================================================ */
+
+@theme inline {
+  /* -----------------------------------------------------------
+     Fonts — injected by next/font/google via layout.tsx
+  ----------------------------------------------------------- */
+  --font-sans:      var(--font-instrument-sans), system-ui, sans-serif;
+  --font-headline:  var(--font-archivo), system-ui, sans-serif;
+  --font-mono:      var(--font-jetbrains-mono), "Courier New", monospace;
+
+  /* -----------------------------------------------------------
+     Brand Palette
+  ----------------------------------------------------------- */
+  --color-bone:       #F4F1EA;   /* canvas / surface */
+  --color-ink:        #111111;   /* primary text / structural frames */
+  --color-accent:     #FF5500;   /* signal accent / CTAs */
+  --color-slate:      #6E6D68;   /* muted / secondary metrics */
+  --color-hairline:   #E5E2DA;   /* 1px borders on bone */
+  --color-heavy-ink:  #141414;   /* inverted surface */
+  --color-divider:    #262626;   /* dividers on dark modules */
+  --color-white:      #FFFFFF;
+
+  /* Material Design token aliases (from code.html / DESIGN.md) */
+  --color-surface:                    #fcf9f2;
+  --color-surface-dim:                #dcdad3;
+  --color-surface-bright:             #fcf9f2;
+  --color-surface-container-lowest:   #ffffff;
+  --color-surface-container-low:      #f6f3ec;
+  --color-surface-container:          #f1eee7;
+  --color-surface-container-high:     #ebe8e1;
+  --color-surface-container-highest:  #e5e2db;
+  --color-on-surface:                 #1c1c18;
+  --color-on-surface-variant:         #5c4037;
+  --color-inverse-surface:            #31312c;
+  --color-inverse-on-surface:         #f3f0e9;
+  --color-outline:                    #907065;
+  --color-outline-variant:            #e5beb2;
+  --color-primary:                    #a63500;
+  --color-on-primary:                 #ffffff;
+  --color-primary-container:          #d04400;
+  --color-secondary:                  #5f5e5e;
+  --color-on-secondary:               #ffffff;
+  --color-secondary-container:        #e5e2e1;
+  --color-tertiary:                   #005ea3;
+  --color-on-tertiary:                #ffffff;
+  --color-error:                      #ba1a1a;
+  --color-on-error:                   #ffffff;
+  --color-error-container:            #ffdad6;
+  --color-background:                 #fcf9f2;
+  --color-on-background:              #1c1c18;
+
+  /* -----------------------------------------------------------
+     Spacing scale (from design system)
+  ----------------------------------------------------------- */
+  --spacing-gutter:          1rem;
+  --spacing-gutter-desktop:  1.5rem;
+  --spacing-margin:          1rem;
+  --spacing-margin-tablet:   2rem;
+  --spacing-margin-desktop:  3rem;
+  --spacing-xs:              0.25rem;
+  --spacing-sm:              0.5rem;
+  --spacing-md:              1rem;
+  --spacing-lg:              1.5rem;
+  --spacing-xl:              2.5rem;
+
+  /* -----------------------------------------------------------
+     Border radius — strictly zero (design system requirement)
+  ----------------------------------------------------------- */
+  --radius: 0px;
+
+  /* -----------------------------------------------------------
+     Max content width
+  ----------------------------------------------------------- */
+  --max-w-content: 1440px;
+}
+
+/* ============================================================
+   Base Reset & Typography Defaults
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-bone);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  overscroll-behavior: none;
+}
+
+/* Skip to main content link (a11y) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.sr-only:focus {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 100;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  background: var(--color-ink);
+  color: var(--color-bone);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Remove scrollbar (matches code.html) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+}
