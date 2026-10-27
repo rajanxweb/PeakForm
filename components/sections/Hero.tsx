@@ -77,8 +77,8 @@ export function Hero() {
                 src={hero.image.src}
                 alt={hero.image.alt}
                 fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 40vw"
+                preload={true}
+                sizes="(min-width: 1024px) 440px, 100vw"
                 className="object-cover grayscale contrast-125"
               />
 

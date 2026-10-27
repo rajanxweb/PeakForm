@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Archivo, Instrument_Sans, JetBrains_Mono } from "next/font/google";
-import { SmoothScroll } from "@/components/ui/SmoothScroll";
 import "./globals.css";
 
 // Headline font — heavy condensed weights matching the design system
@@ -19,10 +18,10 @@ const instrumentSans = Instrument_Sans({
   display: "swap",
 });
 
-// Monospace / data / telemetry font
+// Monospace / data / telemetry font — only used weights
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["500", "600", "700"],
   variable: "--font-jetbrains-mono",
   display: "swap",
 });
@@ -66,7 +65,6 @@ export default function RootLayout({
       className={`${archivo.variable} ${instrumentSans.variable} ${jetbrainsMono.variable}`}
     >
       <body className="bg-bone text-ink antialiased font-sans">
-        <SmoothScroll />
         {children}
       </body>
     </html>
