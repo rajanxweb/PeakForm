@@ -227,6 +227,7 @@ export interface FooterChannel {
   href: string;
   isExternal?: boolean;
   isEmail?: boolean;
+  ariaLabel?: string;
 }
 
 export interface FooterConfig {
@@ -735,9 +736,28 @@ export const siteConfig: SiteConfig = {
     ],
     channelsTitle: "Channels",
     channels: [
-      { label: "Instagram ↗", href: "#", isExternal: true },
-      { label: "YouTube Video Logs ↗", href: "#", isExternal: true },
-      { label: "coach@peakform.demo", href: "mailto:coach@peakform.demo", isEmail: true },
+      {
+        label: "Instagram ↗",
+        href: "https://www.instagram.com/rajan_yadav_211/",
+        isExternal: true,
+        ariaLabel: "PeakForm on Instagram",
+      },
+      {
+        label: "YouTube ↗",
+        href: "https://www.youtube.com/channel/UCTk2HC8LRIhBBlBml49bBng/",
+        isExternal: true,
+        ariaLabel: "PeakForm on YouTube",
+      },
+      ...(process.env.NEXT_PUBLIC_CONTACT_EMAIL
+        ? [
+            {
+              label: process.env.NEXT_PUBLIC_CONTACT_EMAIL,
+              href: `mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL}`,
+              isEmail: true,
+              ariaLabel: `Email PeakForm at ${process.env.NEXT_PUBLIC_CONTACT_EMAIL}`,
+            },
+          ]
+        : []),
     ],
     copyright: "© 2025 PeakForm Coaching. All rights reserved.",
     disclaimer: "Sample content for portfolio demonstration.",
