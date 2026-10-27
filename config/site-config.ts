@@ -653,7 +653,7 @@ export const siteConfig: SiteConfig = {
   },
 
   contact: {
-    sectionNumber: "09",
+    sectionNumber: "08",
     sectionTitle: "BOOK A CALL",
     heading: "Tell me where you are.",
     description:
@@ -728,9 +728,9 @@ export const siteConfig: SiteConfig = {
     ],
     navigationTitle: "Navigation",
     navLinks: [
-      { label: "Coach Philosophy", href: "#coach" },
-      { label: "Audited Results", href: "#results" },
-      { label: "Pricing Matrix", href: "#pricing" },
+      { label: "The coach", href: "#coach" },
+      { label: "Client results", href: "#results" },
+      { label: "Pricing", href: "#pricing" },
       { label: "FAQ", href: "#faq" },
       { label: "Direct Contact", href: "#contact" },
     ],
@@ -759,7 +759,7 @@ export const siteConfig: SiteConfig = {
           ]
         : []),
     ],
-    copyright: "© 2025 PeakForm Coaching. All rights reserved.",
+    copyright: `© ${new Date().getFullYear()} PeakForm Coaching. All rights reserved.`,
     disclaimer: "Sample content for portfolio demonstration.",
   },
 };
