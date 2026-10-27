@@ -301,7 +301,7 @@ export const siteConfig: SiteConfig = {
     note: "No card. No sales script. 20 minutes direct with head coach.",
     image: {
       src: "/images/hero-lifter.jpg",
-      alt: "Monochromatic black and white editorial photography of an athletic lifter gripping a heavy steel barbell with chalked hands inside a stark, minimalist training studio. Raw contrast, deep industrial shadows, crisp muscular focus, and architectural Swiss light precision.",
+      alt: "Lifter gripping a loaded barbell with chalked hands in a quiet gym",
       tag: "[■ WEEK 08 — SQUAT · 82.5 KG × 5]",
       width: 800,
       height: 1000,
@@ -401,13 +401,13 @@ export const siteConfig: SiteConfig = {
     credentials: "CSCS · USAW LVL 2 · 12 YEARS EXPERIENCE · 400+ ATHLETES COACHED",
     coachImage: {
       src: "/images/coach-portrait.jpg",
-      alt: "Monochrome studio portrait of a serious head strength coach in a dark athletic tee, standing against a clean concrete wall. Direct confident gaze, sharp directional studio lighting, zero decorative softness, high contrast Swiss visual aesthetic.",
+      alt: "Portrait of a strength coach in a dark t-shirt against a concrete wall",
       width: 800,
       height: 1000,
     },
     photoBandImage: {
       src: "/images/weight-plates.jpg",
-      alt: "Wide panoramic horizontal shot of calibrated cast iron Olympic weight plates racked along a heavy steel barbell stand in an empty, quiet strength training warehouse. Stark overhead lighting, deep shadows, crisp industrial floor texture, monochrome black and white palette.",
+      alt: "Weight plates racked beside a barbell stand in an empty gym",
       width: 1440,
       height: 617,
     },
