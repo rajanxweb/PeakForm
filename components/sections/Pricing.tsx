@@ -159,11 +159,13 @@ export function Pricing() {
         </div>
 
         {/* Guarantee Note */}
-        <div className="mt-12 text-left">
-          <p className="font-mono text-label uppercase text-stone tracking-wider">
-            {pricing.guaranteeNote}
-          </p>
-        </div>
+        {pricing.guaranteeNote ? (
+          <div className="mt-12 text-left">
+            <p className="font-mono text-label uppercase text-stone tracking-wider">
+              {pricing.guaranteeNote}
+            </p>
+          </div>
+        ) : null}
       </div>
     </section>
   );
