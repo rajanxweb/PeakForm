@@ -104,7 +104,7 @@ export function Footer() {
           <p className="font-mono text-label uppercase text-stone-dark">
             {siteConfig.footer.copyright}
           </p>
-          <p className="font-mono text-label uppercase text-stone">
+          <p className="font-mono text-label uppercase text-stone-dark">
             {siteConfig.footer.disclaimer}
           </p>
         </div>

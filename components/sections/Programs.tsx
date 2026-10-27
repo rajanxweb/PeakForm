@@ -64,7 +64,10 @@ export function Programs() {
                   </div>
 
                   {/* Arrow Glyphs */}
-                  <div className="md:col-span-1 text-right font-display text-display-md text-ink group-hover:text-accent transition-colors duration-150">
+                  <div
+                    aria-hidden="true"
+                    className="md:col-span-1 text-right font-display text-display-md text-ink group-hover:text-accent transition-colors duration-150"
+                  >
                     ↗
                   </div>
                 </div>
