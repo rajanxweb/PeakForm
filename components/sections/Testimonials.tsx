@@ -82,7 +82,7 @@ export function Testimonials() {
 
         {/* Disclaimer */}
         <div className="mt-12 pt-6 border-t border-line-dark">
-          <p className="font-mono text-label uppercase text-stone">
+          <p className="font-mono text-label uppercase text-stone-dark">
             {testimonials.disclaimer}
           </p>
         </div>

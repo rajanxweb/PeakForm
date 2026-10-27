@@ -36,21 +36,26 @@ export function Contact() {
                 {contact.stepsHeading}
               </span>
 
-              {contact.steps.map((step) => (
-                <div key={step.step} className="flex items-start gap-4">
-                  <span className="font-mono text-display-md text-accent font-black shrink-0 leading-none">
-                    {step.step}
-                  </span>
-                  <div>
-                    <h3 className="font-display text-[16px] md:text-body-lg uppercase text-ink font-bold leading-snug">
-                      {step.title}
-                    </h3>
-                    <p className="font-sans text-body-sm text-stone leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+              <ol className="space-y-6 list-none p-0 m-0">
+                {contact.steps.map((step) => (
+                  <li key={step.step} className="flex items-start gap-4">
+                    <span
+                      className="font-mono text-display-md text-accent font-black shrink-0 leading-none"
+                      aria-hidden="true"
+                    >
+                      {step.step}
+                    </span>
+                    <div>
+                      <strong className="font-display text-[16px] md:text-body-lg uppercase text-ink font-bold leading-snug block">
+                        {step.title}
+                      </strong>
+                      <p className="font-sans text-body-sm text-stone leading-relaxed">
+                        {step.description}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
             </div>
           </div>
 

@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
@@ -132,23 +130,10 @@ export function Button({
     // Next.js <Link> treats these as route navigations in App Router,
     // which breaks same-page anchor scrolling entirely.
     if (href.startsWith("#")) {
-      const handleHashClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        const targetId = href.replace(/^#/, "");
-        const target = document.getElementById(targetId) || document.querySelector(href);
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: "smooth", block: "start" });
-          if (window.location.hash !== href) {
-            window.history.pushState(null, "", href);
-          }
-        }
-        onClick?.(e);
-      };
-
       return (
         <a
           href={href}
-          onClick={handleHashClick}
+          onClick={onClick}
           className={classes}
           {...(linkRest as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
         >

@@ -79,6 +79,7 @@ export function Footer() {
                       href={channel.href}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={channel.ariaLabel}
                       className="hover:text-accent transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-focus"
                     >
                       {channel.label}
@@ -86,6 +87,7 @@ export function Footer() {
                   ) : (
                     <a
                       href={channel.href}
+                      aria-label={channel.ariaLabel}
                       className="hover:text-accent transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-focus"
                     >
                       {channel.label}
@@ -102,7 +104,7 @@ export function Footer() {
           <p className="font-mono text-label uppercase text-stone-dark">
             {siteConfig.footer.copyright}
           </p>
-          <p className="font-mono text-label uppercase text-stone">
+          <p className="font-mono text-label uppercase text-stone-dark">
             {siteConfig.footer.disclaimer}
           </p>
         </div>

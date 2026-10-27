@@ -114,16 +114,22 @@ export function ContactForm() {
       if (response.ok && data.success) {
         setStatus("success");
       } else {
+        const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL;
         setStatus("error");
         setErrorMessage(
           data.message ||
-            "Failed to send your inquiry. Please try again or contact coach@peakform.demo directly."
+            (contactEmail
+              ? `Failed to send your inquiry. Please try again or contact ${contactEmail} directly.`
+              : "Failed to send your inquiry. Please try again later.")
         );
       }
     } catch {
+      const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL;
       setStatus("error");
       setErrorMessage(
-        "Network error occurred. Please check your connection or email coach@peakform.demo directly."
+        contactEmail
+          ? `Network error occurred. Please check your connection or email ${contactEmail} directly.`
+          : "Network error occurred. Please check your connection and try again."
       );
     }
   };

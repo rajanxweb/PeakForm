@@ -58,7 +58,7 @@ export function Results() {
                       {metric.label}
                     </span>
                     <span className="font-mono text-[17px] md:text-[18px] text-bone font-semibold tabular-nums">
-                      {metric.before} <span className="text-accent">→</span>{" "}
+                      {metric.before} <span className="text-accent" aria-hidden="true">→</span>{" "}
                       <span className="text-accent font-bold">{metric.after}</span>
                     </span>
                   </div>
@@ -70,7 +70,7 @@ export function Results() {
 
         {/* Portfolio Demonstration Disclaimer */}
         <div className="mt-8 pt-4 border-t border-line-dark">
-          <p className="font-mono text-label uppercase text-stone">
+          <p className="font-mono text-label uppercase text-stone-dark">
             {results.disclaimer}
           </p>
         </div>

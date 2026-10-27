@@ -1,18 +1,13 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { X, ArrowUpRight } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 import { siteConfig } from "@/config/site-config";
 import { Button } from "@/components/ui/Button";
 
-export interface MobileMenuProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
 /**
- * MobileMenu — Full-screen rectilinear mobile overlay.
+ * MobileMenu — Full-screen rectilinear mobile overlay with integrated trigger.
  * Conforms to PeakForm Design System:
  * - Large display-md navigation links
  * - Strictly zero radius and 1px hairline dividing rules
@@ -20,7 +15,8 @@ export interface MobileMenuProps {
  * - Esc closes the menu
  * - Body scroll locked while open
  */
-export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+export function MobileMenu() {
+  const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -45,7 +41,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         event.preventDefault();
-        onClose();
+        setIsOpen(false);
         return;
       }
 
@@ -80,87 +76,102 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [isOpen, onClose]);
-
-  if (!isOpen) return null;
+  }, [isOpen]);
 
   return (
-    <div
-      ref={containerRef}
-      role="dialog"
-      aria-modal="true"
-      aria-label="Mobile Navigation Menu"
-      className="fixed inset-0 z-[100] bg-bone flex flex-col justify-between overflow-y-auto"
-    >
-      {/* Top Bar with Brand & Close Button */}
-      <div className="h-[72px] border-b border-line px-4 sm:px-8 flex items-center justify-between shrink-0">
-        <Link
-          href="#"
-          onClick={onClose}
-          className="flex items-center gap-2 font-display text-[20px] font-bold tracking-tighter uppercase text-ink focus-visible:outline-3 focus-visible:outline-focus"
-        >
-          <span className="w-2.5 h-2.5 bg-accent" aria-hidden="true" />
-          <span>{siteConfig.brand.name}</span>
-        </Link>
+    <>
+      {/* Mobile Hamburger Toggle */}
+      <button
+        type="button"
+        onClick={() => setIsOpen(true)}
+        aria-label="Open navigation menu"
+        aria-expanded={isOpen}
+        className="lg:hidden h-11 w-11 flex items-center justify-center border border-ink text-ink hover:bg-ink hover:text-bone transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-focus cursor-pointer"
+      >
+        <Menu className="w-5 h-5" strokeWidth={2} aria-hidden="true" />
+      </button>
 
-        <button
-          ref={closeButtonRef}
-          type="button"
-          onClick={onClose}
-          aria-label="Close navigation menu"
-          className="h-11 w-11 flex items-center justify-center border border-ink text-ink hover:bg-ink hover:text-bone transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-focus"
+      {/* Full-Screen Drawer */}
+      {isOpen && (
+        <div
+          ref={containerRef}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Mobile Navigation Menu"
+          className="fixed inset-0 z-[100] bg-bone flex flex-col justify-between overflow-y-auto"
         >
-          <X className="w-5 h-5" strokeWidth={2} aria-hidden="true" />
-        </button>
-      </div>
+          {/* Top Bar with Brand & Close Button */}
+          <div className="h-[72px] border-b border-line px-4 sm:px-8 flex items-center justify-between shrink-0">
+            <Link
+              href="#"
+              onClick={() => setIsOpen(false)}
+              className="flex items-center gap-2 font-display text-[20px] font-bold tracking-tighter uppercase text-ink focus-visible:outline-3 focus-visible:outline-focus"
+            >
+              <span className="w-2.5 h-2.5 bg-accent" aria-hidden="true" />
+              <span>{siteConfig.brand.name}</span>
+            </Link>
 
-      {/* Main Nav Links Stack */}
-      <nav className="flex-1 flex flex-col justify-center px-4 sm:px-8 py-8 divide-y divide-line">
-        {siteConfig.brand.nav.map((item, index) => (
-          <a
-            key={item.href}
-            href={item.href}
-            onClick={(e) => {
-              e.preventDefault();
-              onClose();
-              // Small delay lets the menu close before scrolling
-              setTimeout(() => {
-                document.querySelector(item.href)?.scrollIntoView({ behavior: "smooth", block: "start" });
-              }, 80);
-            }}
-            className="group flex items-center justify-between py-5 font-display text-display-md uppercase text-ink hover:text-accent transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-focus cursor-pointer"
-          >
-            <span className="flex items-baseline gap-4">
-              <span className="font-mono text-label text-stone">
-                0{index + 1}
-              </span>
-              <span>{item.label}</span>
-            </span>
-            <ArrowUpRight
-              className="w-6 h-6 text-stone group-hover:text-accent transition-transform duration-150 group-hover:translate-x-1 group-hover:-translate-y-1"
-              strokeWidth={2}
-              aria-hidden="true"
-            />
-          </a>
-        ))}
-      </nav>
+            <button
+              ref={closeButtonRef}
+              type="button"
+              onClick={() => setIsOpen(false)}
+              aria-label="Close navigation menu"
+              className="h-11 w-11 flex items-center justify-center border border-ink text-ink hover:bg-ink hover:text-bone transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-focus cursor-pointer"
+            >
+              <X className="w-5 h-5" strokeWidth={2} aria-hidden="true" />
+            </button>
+          </div>
 
-      {/* Bottom CTA Block */}
-      <div className="p-4 sm:px-8 pb-8 pt-4 border-t border-line shrink-0 space-y-4">
-        <Button
-          href={siteConfig.brand.cta.href}
-          onClick={onClose as React.MouseEventHandler<HTMLAnchorElement>}
-          variant="primary"
-          size="full"
-          showArrow
-        >
-          {siteConfig.brand.cta.label}
-        </Button>
-        <p className="font-mono text-label text-stone text-center uppercase tracking-wider">
-          {siteConfig.hero.note}
-        </p>
-      </div>
-    </div>
+          {/* Main Nav Links Stack */}
+          <nav className="flex-1 flex flex-col justify-center px-4 sm:px-8 py-8 divide-y divide-line">
+            {siteConfig.brand.nav.map((item, index) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsOpen(false);
+                  setTimeout(() => {
+                    document
+                      .querySelector(item.href)
+                      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }, 80);
+                }}
+                className="group flex items-center justify-between py-5 font-display text-display-md uppercase text-ink hover:text-accent transition-colors duration-150 focus-visible:outline-3 focus-visible:outline-focus cursor-pointer"
+              >
+                <span className="flex items-baseline gap-4">
+                  <span className="font-mono text-label text-stone">
+                    0{index + 1}
+                  </span>
+                  <span>{item.label}</span>
+                </span>
+                <ArrowUpRight
+                  className="w-6 h-6 text-stone group-hover:text-accent transition-transform duration-150 group-hover:translate-x-1 group-hover:-translate-y-1"
+                  strokeWidth={2}
+                  aria-hidden="true"
+                />
+              </a>
+            ))}
+          </nav>
+
+          {/* Bottom CTA Block */}
+          <div className="p-4 sm:px-8 pb-8 pt-4 border-t border-line shrink-0 space-y-4">
+            <Button
+              href={siteConfig.brand.cta.href}
+              onClick={() => setIsOpen(false)}
+              variant="primary"
+              size="full"
+              showArrow
+            >
+              {siteConfig.brand.cta.label}
+            </Button>
+            <p className="font-mono text-label text-stone text-center uppercase tracking-wider">
+              {siteConfig.hero.note}
+            </p>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 

@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://peakform.co";
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || "https://peakform-app-psi.vercel.app";
 
   return {
     rules: {

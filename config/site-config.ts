@@ -227,6 +227,7 @@ export interface FooterChannel {
   href: string;
   isExternal?: boolean;
   isEmail?: boolean;
+  ariaLabel?: string;
 }
 
 export interface FooterConfig {
@@ -300,7 +301,7 @@ export const siteConfig: SiteConfig = {
     note: "No card. No sales script. 20 minutes direct with head coach.",
     image: {
       src: "/images/hero-lifter.jpg",
-      alt: "Monochromatic black and white editorial photography of an athletic lifter gripping a heavy steel barbell with chalked hands inside a stark, minimalist training studio. Raw contrast, deep industrial shadows, crisp muscular focus, and architectural Swiss light precision.",
+      alt: "Lifter gripping a loaded barbell with chalked hands in a quiet gym",
       tag: "[■ WEEK 08 — SQUAT · 82.5 KG × 5]",
       width: 800,
       height: 1000,
@@ -310,8 +311,8 @@ export const siteConfig: SiteConfig = {
   stats: {
     items: [
       {
-        value: "100%",
-        label: "1:1 COACH-WRITTEN PLANS",
+        value: "12 yrs",
+        label: "COACHING EXPERIENCE",
       },
       {
         value: "3×",
@@ -322,8 +323,8 @@ export const siteConfig: SiteConfig = {
         label: "FORM CHECK TURNAROUND",
       },
       {
-        value: "0",
-        label: "NONSENSE OR DIET DOGMA",
+        value: "400+",
+        label: "CLIENTS COACHED",
         highlight: true,
       },
     ],
@@ -334,7 +335,7 @@ export const siteConfig: SiteConfig = {
     sectionTitle: "PROGRAMS",
     heading: "Four ways to start.",
     description:
-      "Every track is delivered through our private portal with custom load-velocity targets, video-linked cues, and proactive load management.",
+      "Every program comes with a private client portal, video-linked exercise cues, and weekly adjustments based on how you're recovering.",
     items: [
       {
         number: "01",
@@ -359,7 +360,7 @@ export const siteConfig: SiteConfig = {
         title: "Longevity & Pain-Free Movement",
         targetAudience: "For: masters athletes, desk workers",
         description:
-          "Fix nagging joint tweaks and restore hip, shoulder, and spinal durability through full-range loaded mobility.",
+          "Train around nagging aches and build stronger hips, shoulders and back with controlled, full-range exercises.",
         duration: "Ongoing",
         href: "#pricing",
       },
@@ -380,8 +381,8 @@ export const siteConfig: SiteConfig = {
     sectionTitle: "THE COACH",
     heading: "Coaching that respects your calendar and your joints.",
     paragraphs: [
-      "Most online fitness advice is created by 22-year-olds who sleep nine hours a night and have never worked a 50-hour week. At PeakForm, programming is rooted in exercise mechanics, load autocalibration, and real-world sustainability.",
-      "We eliminate training junk. Every set in your logbook serves a purpose: elevating lean force production, protecting connective tissue, and keeping you resilient outside the gym.",
+      "Most online fitness advice is created by 22-year-olds who sleep nine hours a night and have never worked a 50-hour week. At PeakForm, programming is built on sound exercise technique, sensible progression, and a schedule you can actually keep.",
+      "I cut the filler. Every set in your logbook has a job: build strength, protect your joints, and keep you feeling capable outside the gym.",
     ],
     principles: [
       {
@@ -390,23 +391,23 @@ export const siteConfig: SiteConfig = {
       },
       {
         number: "02",
-        text: "Zero cookie-cutter templates; load and volume autoregulated for fatigue.",
+        text: "No cookie-cutter templates; weights and volume adjust to how recovered you are.",
       },
       {
         number: "03",
         text: "Practical nutrition targets that don't isolate you from family dinners.",
       },
     ],
-    credentials: "CSCS · USAW LVL 2 · 12 YEARS EXPERIENCE · 400+ ATHLETES COACHED",
+    credentials: "CERTIFIED STRENGTH COACH · 12 YEARS EXPERIENCE · 400+ CLIENTS COACHED",
     coachImage: {
       src: "/images/coach-portrait.jpg",
-      alt: "Monochrome studio portrait of a serious head strength coach in a dark athletic tee, standing against a clean concrete wall. Direct confident gaze, sharp directional studio lighting, zero decorative softness, high contrast Swiss visual aesthetic.",
+      alt: "Portrait of a strength coach in a dark t-shirt against a concrete wall",
       width: 800,
       height: 1000,
     },
     photoBandImage: {
       src: "/images/weight-plates.jpg",
-      alt: "Wide panoramic horizontal shot of calibrated cast iron Olympic weight plates racked along a heavy steel barbell stand in an empty, quiet strength training warehouse. Stark overhead lighting, deep shadows, crisp industrial floor texture, monochrome black and white palette.",
+      alt: "Weight plates racked beside a barbell stand in an empty gym",
       width: 1440,
       height: 617,
     },
@@ -417,7 +418,7 @@ export const siteConfig: SiteConfig = {
     sectionTitle: "CLIENT RESULTS",
     heading: "Numbers, not before-and-after photos.",
     description:
-      "Lighting tricks and dehydrated selfies don't measure capability. Here is audited performance data from busy clients with demanding careers.",
+      "Lighting tricks and dehydrated selfies don't measure capability. Here is sample performance data from busy clients with demanding careers.",
     entries: [
       {
         client: "Priya S., 38",
@@ -435,9 +436,9 @@ export const siteConfig: SiteConfig = {
             after: "3 DEDICATED",
           },
           {
-            label: "RESTING HEART RATE",
-            before: "76",
-            after: "64 BPM",
+            label: "GOBLET SQUAT",
+            before: "12 KG",
+            after: "24 KG",
           },
         ],
       },
@@ -479,9 +480,9 @@ export const siteConfig: SiteConfig = {
             after: "130 KG",
           },
           {
-            label: "ANKLE MOBILITY ROM",
-            before: "LIMITED",
-            after: "FULL DEPTH",
+            label: "FARMER CARRY, PER HAND",
+            before: "20 KG",
+            after: "32 KG",
           },
         ],
       },
@@ -492,24 +493,24 @@ export const siteConfig: SiteConfig = {
   pricing: {
     sectionNumber: "05",
     sectionTitle: "PRICING",
-    heading: "Clear monthly rates. No contracts.",
+    heading: "Clear rates. No contracts.",
     description: "No initiation fees. Change tracks or pause whenever life demands it.",
-    billingNote: "Billed monthly via Stripe. Cancel anytime with 7 days notice.",
-    guaranteeNote:
-      "14-day full satisfaction guarantee. All cancellations processed instantly without friction.",
+    billingNote:
+      "Coaching plans are billed monthly. Cancel any time with 7 days' notice before renewal. The Blueprint has a 14-day refund.",
+    guaranteeNote: "",
     tiers: [
       {
         tierNumber: "TIER 01",
         subtag: "SELF-PACED",
         name: "The Blueprint",
-        price: "$149",
-        period: "/ mo",
+        price: "$79",
+        period: "one-time",
         description: "Self-guided structured program with weekly asynchronous check-in.",
         features: [
-          "3-day structured mesocycle",
-          "PeakForm logging mobile app",
-          "Weekly form-check submission",
-          "Monthly load recalibration",
+          "12-week structured program, 3 sessions a week",
+          "Training log sheet (PDF and spreadsheet)",
+          "Exercise video library",
+          "14 days of email support",
         ],
         cta: {
           text: "Get the Blueprint",
@@ -529,7 +530,7 @@ export const siteConfig: SiteConfig = {
           "100% custom calendarized schedule",
           "48-hr video critique turnaround",
           "Bi-weekly live video consults",
-          "Daily WhatsApp coach access",
+          "Daily messaging access",
           "Custom travel workout swaps",
         ],
         cta: {
@@ -549,7 +550,7 @@ export const siteConfig: SiteConfig = {
           "Comprehensive high-touch training, daily messaging, nutrition protocol.",
         features: [
           "Everything in Dedicated 1:1",
-          "Precision macronutrient blueprints",
+          "Personalized nutrition targets",
           "Weekly 30-min strategy calls",
           "Direct voice-note coach access",
         ],
@@ -621,7 +622,7 @@ export const siteConfig: SiteConfig = {
       {
         question: "What if I have an old shoulder or lumbar disc issue?",
         answer:
-          "Over 70% of our clients enter with prior joint irritations. We adjust exercise variations (e.g., trap-bar deadlifts instead of conventional, safety squat bars, or floor presses) to load the target musculature without flaring joint inflammation.",
+          "Many clients arrive with old injuries. I'm a coach, not a doctor, so get clearance from your physician first. Then I adapt exercises, for example trap-bar deadlifts instead of conventional, or floor presses instead of bench, to keep training comfortable.",
       },
       {
         question: "How much time do workouts take each week?",
@@ -636,7 +637,7 @@ export const siteConfig: SiteConfig = {
       {
         question: "What is the cancellation policy?",
         answer:
-          "All memberships are billed on a flexible 30-day recurring basis with zero lock-in contracts. You can cancel directly from your profile settings with 7 days' advance notice before renewal.",
+          "Coaching plans renew every 30 days with no lock-in contract. Cancel any time with 7 days' notice before renewal. The Blueprint includes a 14-day refund.",
       },
     ],
   },
@@ -652,7 +653,7 @@ export const siteConfig: SiteConfig = {
   },
 
   contact: {
-    sectionNumber: "09",
+    sectionNumber: "08",
     sectionTitle: "BOOK A CALL",
     heading: "Tell me where you are.",
     description:
@@ -727,19 +728,38 @@ export const siteConfig: SiteConfig = {
     ],
     navigationTitle: "Navigation",
     navLinks: [
-      { label: "Coach Philosophy", href: "#coach" },
-      { label: "Audited Results", href: "#results" },
-      { label: "Pricing Matrix", href: "#pricing" },
+      { label: "The coach", href: "#coach" },
+      { label: "Client results", href: "#results" },
+      { label: "Pricing", href: "#pricing" },
       { label: "FAQ", href: "#faq" },
       { label: "Direct Contact", href: "#contact" },
     ],
     channelsTitle: "Channels",
     channels: [
-      { label: "Instagram ↗", href: "#", isExternal: true },
-      { label: "YouTube Video Logs ↗", href: "#", isExternal: true },
-      { label: "coach@peakform.demo", href: "mailto:coach@peakform.demo", isEmail: true },
+      {
+        label: "Instagram ↗",
+        href: "https://www.instagram.com/rajan_yadav_211/",
+        isExternal: true,
+        ariaLabel: "PeakForm on Instagram",
+      },
+      {
+        label: "YouTube ↗",
+        href: "https://www.youtube.com/channel/UCTk2HC8LRIhBBlBml49bBng/",
+        isExternal: true,
+        ariaLabel: "PeakForm on YouTube",
+      },
+      ...(process.env.NEXT_PUBLIC_CONTACT_EMAIL
+        ? [
+            {
+              label: process.env.NEXT_PUBLIC_CONTACT_EMAIL,
+              href: `mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL}`,
+              isEmail: true,
+              ariaLabel: `Email PeakForm at ${process.env.NEXT_PUBLIC_CONTACT_EMAIL}`,
+            },
+          ]
+        : []),
     ],
-    copyright: "© 2025 PeakForm Coaching. All rights reserved.",
+    copyright: `© ${new Date().getFullYear()} PeakForm Coaching. All rights reserved.`,
     disclaimer: "Sample content for portfolio demonstration.",
   },
 };

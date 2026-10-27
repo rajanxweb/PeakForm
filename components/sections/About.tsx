@@ -23,7 +23,8 @@ export function About() {
                 src={about.coachImage.src}
                 alt={about.coachImage.alt}
                 fill
-                sizes="(max-width: 1024px) 100vw, 40vw"
+                loading="lazy"
+                sizes="(min-width: 1024px) 440px, 100vw"
                 className="object-cover grayscale contrast-125"
               />
             </div>
@@ -84,6 +85,7 @@ export function About() {
           src={about.photoBandImage.src}
           alt={about.photoBandImage.alt}
           fill
+          loading="lazy"
           sizes="100vw"
           className="object-cover grayscale contrast-125"
         />
