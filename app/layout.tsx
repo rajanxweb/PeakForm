@@ -27,24 +27,31 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://peakform-app-psi.vercel.app";
+
 export const metadata: Metadata = {
-  title: {
-    default: "PeakForm — High-Performance Athletic Coaching",
-    template: "%s | PeakForm",
-  },
+  metadataBase: new URL(siteUrl),
+  title: "PeakForm | Online Strength Coaching for Busy Adults Over 30",
   description:
-    "Personalized strength training built around your life. 1:1 programming, video analysis, and weekly accountability from an expert coach.",
-  keywords: [
-    "strength coaching",
-    "online personal trainer",
-    "1:1 coaching",
-    "powerlifting",
-    "athletic performance",
-  ],
+    "Online strength coaching for busy adults over 30. Three 45-minute sessions a week, built around your schedule, joints and gym. Free intro call.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    type: "website",
-    locale: "en_US",
+    title: "PeakForm | Online Strength Coaching for Busy Adults Over 30",
+    description:
+      "Online strength coaching for busy adults over 30. Three 45-minute sessions a week, built around your schedule, joints and gym. Free intro call.",
+    url: siteUrl,
     siteName: "PeakForm",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PeakForm | Online Strength Coaching for Busy Adults Over 30",
+    description:
+      "Online strength coaching for busy adults over 30. Three 45-minute sessions a week, built around your schedule, joints and gym. Free intro call.",
   },
 };
 
